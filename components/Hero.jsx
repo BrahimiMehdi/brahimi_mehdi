@@ -1,17 +1,25 @@
-import React from "react";
+import {useEffect,useRef} from "react";
 import { Martel_Sans } from "@next/font/google";
 import { IoIosArrowDown } from "react-icons/io";
-import { gsap, Power3 } from "gsap";
-import { useEffect, useRef } from "react";
+import Image from "next/image";
+import {gsap,Power3} from "gsap";
 const martel_sans = Martel_Sans({
   subsets: ["latin"],
   weight: ["200", "300", "400", "600", "700"],
 });
 
 const Hero = () => {
+    const content = useRef();
+    const image = useRef();
+    const tl = gsap.timeline();
+    useEffect(() => {
+      tl.to(content.current,{opacity:1,ease:Power3.easeOut,delay:0.6,duration:1})
+        .to(image.current,{opacity:1,ease:Power3.easeOut,duration:1})
+    }, [])
+    
   return (
     <section className="w-full grid relative text-white grid-cols-9">
-      <div className="w-full gap-y-8 p-8 py-16 h-full relative flex flex-col col-span-5">
+      <div ref={content} className="w-full opacity-0 gap-y-8 p-8 py-16 h-full relative flex flex-col col-span-5">
         <h1 className="font-bold tracking-wide uppercase text-5xl leading-normal">
           turn your <span className="text-yellow">idea</span> into <br /> <span>a reality</span>
         </h1>
@@ -30,8 +38,8 @@ const Hero = () => {
       <div className="w-full  h-full relative col-span-4">
         <div data-line="10" className="w-[2.5px] h-0 sideLine right-0 top-0   bg-yellow  absolute "></div>
 
-        <div className="w-full h-full p-12 grid place-items-center">
-          <img src="/cuate.svg" alt="" />
+        <div ref={image} className="w-full opacity-0 h-full p-12 grid place-items-center">
+          <Image width={763} height={631.95} className="h-full w-full object-contain" src="/cuate.svg" alt="" />
         </div>
       </div>
       <div id="topers" className="h-[2px] bg-yellow rat w-0 absolute bottom-0"></div>
