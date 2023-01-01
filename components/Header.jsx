@@ -9,18 +9,7 @@ const Header = () => {
   const topLine = useRef();
   const sideLine2 = useRef([]);
 
-  const tl = gsap.timeline();
-  useEffect(() => {
-    tl.to("#topers", { width: "100%", duration: 5, ease: Power3.easeOut });
-    gsap.utils.toArray(".sideLine").forEach((line) => {
-      let number = line.getAttribute("data-line");
-      gsap.to(`.sideLine[data-line="${number}"]`, { delay: number / 2, duration: 1, height: "100%", ease: Power3.easeOut });
-    });
-    gsap.utils.toArray(".innerInfo").forEach((info) => {
-      let number = info.getAttribute("data-info");
-      gsap.to(`.innerInfo[data-info="${number}"]`, { delay: number / 2, duration: 1, opacity:1, ease: Power3.easeOut });
-    });
-  }, []);
+  
 
   return (
     <header className="w-full grid relative h-28 grid-cols-9  text-white  ">
@@ -40,19 +29,19 @@ const Header = () => {
       </div>
       <div className="w-full h-full relative ">
         <div data-line="3" className="w-[2px] bg-yellow sideLine h-0 absolute right-0"></div>
-        <LinkS data-info="2" to="/" className="h-full opacity-0 w-full text-lg font-semibold innerInfo cursor-pointer uppercase grid place-items-center">home</LinkS>
+        <LinkS data-info="2" to="/" className="h-full tracking-widest opacity-0 w-full  font-semibold innerInfo cursor-pointer uppercase grid place-items-center">home</LinkS>
       </div>
       <div className="w-full h-full relative ">
         <div data-line="4" className="w-[2px] bg-yellow sideLine h-0 absolute right-0"></div>
-        <LinkS data-info="3" to="/" className="h-full opacity-0 w-full text-lg font-semibold cursor-pointer innerInfo uppercase grid place-items-center">work</LinkS>
+        <LinkS data-info="3" to="/" className="h-full tracking-widest opacity-0 w-full  font-semibold cursor-pointer innerInfo uppercase grid place-items-center">work</LinkS>
       </div>
       <div className="w-full h-full relative ">
         <div data-line="5" className="w-[2px] bg-yellow sideLine h-0 absolute right-0"></div>
-        <LinkS data-info="5" to="/" className="h-full opacity-0 w-full text-lg font-semibold cursor-pointer innerInfo uppercase grid place-items-center">about</LinkS>
+        <LinkS data-info="5" to="/" className="h-full tracking-widest opacity-0 w-full  font-semibold cursor-pointer innerInfo uppercase grid place-items-center">about</LinkS>
       </div>
       <div className="w-full h-full relative ">
         <div data-line="6" className="w-[2px] bg-yellow sideLine h-0 absolute right-0"></div>
-        <LinkS data-info="6" to="/" className="h-full opacity-0 w-full text-lg font-semibold cursor-pointer innerInfo uppercase grid place-items-center">
+        <LinkS data-info="6" to="/" className="h-full tracking-widest opacity-0 w-full  font-semibold cursor-pointer innerInfo uppercase grid place-items-center">
             contact
         </LinkS>
       </div>
