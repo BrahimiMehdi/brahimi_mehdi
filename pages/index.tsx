@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
-import {Header} from "../components"
+import {Header,Hero} from "../components"
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -15,6 +15,7 @@ export default function Home() {
       </Head>
       <main className="min-h-screen  bg-dark-blue ">
         <Header />
+        <Hero />
       </main>
     </>
   )
