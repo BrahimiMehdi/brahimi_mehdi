@@ -1,18 +1,12 @@
-import { gsap, Power3 } from "gsap";
-import { useEffect, useRef } from "react";
 import { Link as LinkS } from "react-scroll";
 import Image from "next/image";
 import Link from "next/link";
 import {AiFillHome} from "react-icons/ai"
 import {BsFillMoonFill} from "react-icons/bs"
 const Header = () => {
-  const topLine = useRef();
-  const sideLine2 = useRef([]);
-
-  
 
   return (
-    <header className="w-full grid relative h-28 grid-cols-9  text-white  ">
+    <header className="w-full grid fixed top-0  bgdark bg-dark-blue z-20 h-28 grid-cols-9  text-white  ">
       <div id="topers" className="h-[2px] bg-yellow rat w-0 absolute top-0"></div>
       <div id="topers" className="h-[2px] bg-yellow rat w-0 absolute bottom-0"></div>
 
@@ -20,7 +14,7 @@ const Header = () => {
         <div data-line="1" className="w-[2px] sideLine bg-yellow h-0 absolute left-0"></div>
         <div data-line="2" className="w-[2px] sideLine bg-yellow h-0 absolute right-0"></div>
         <div data-info="1" className="w-full innerInfo opacity-0 h-full py-4 px-12 flex items-center justify-between">
-            <Image width={400} height={400} className="w-20 object-contain" src={"/pic.png"} />
+            <Image priority width={400} height={400} className="w-20 object-contain" src={"/pic.png"} />
             <p className="text-xl font-bold uppercase tracking-widest">brahimi mehdi</p>
             <Link href={"/"}>
                 <AiFillHome className="text-3xl text-white" />
