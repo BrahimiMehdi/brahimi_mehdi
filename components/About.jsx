@@ -18,7 +18,7 @@ const About = () => {
         <div data-scrollV="3" className="w-[2.5px] h-0  scrollLine right-0 top-0   bg-yellow  absolute "></div>
         <div data-scrollI="2" className="px-16 opacity-0 flex scrollInfo flex-col gap-y-8 h-full w-full p-8">
           <p className="font-bold text-white tracking-wide uppercase text-5xl ">skills</p>
-          <p className={`${hind_Guntur.className} text-gray-50 leading-normal text-justify text-2xl mr-24 tracking-wider font-light`}>I make jam-stack websites using next-js and react as a framework with graph-ql for data fetching, alongside tailwindCSS for styling, and figma for design.</p>
+          <p className={`${hind_Guntur.className} text-gray-50 leading-normal text-justify text-2xl  tracking-wider font-light`}>I make jam-stack websites using next-js and react as a framework with graph-ql for data fetching, alongside tailwindCSS for styling, and figma for design.</p>
           <div className="w-full flex items-center justify-between flex-wrap">
             <svg className="w-16" viewBox="0 0 74 74" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0_563_3109)">
@@ -95,7 +95,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div data-scrollH="1" className="h-[2px] bg-yellow rat scrollLineH w-0 absolute bottom-0"></div>
+      <div data-scrollH="1" className="h-[2px] bg-yellow  scrollLineH w-0 absolute bottom-0"></div>
     </section>
   );
 };
