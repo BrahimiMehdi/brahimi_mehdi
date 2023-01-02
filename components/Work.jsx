@@ -22,39 +22,38 @@ const Work = () => {
             </div>
           </Link>
         </div>
-        <div data-scrollH="2" className="h-[2px] bg-yellow  z-40 scrollLineH w-0 absolute bottom-0"></div>
+        <div data-scrollH="2" className="h-[2px] bg-yellow   z-40 scrollLineH w-0 absolute bottom-0"></div>
       </div>
       {/* edjoy sec */}
-      <div className="w-full   h-full row-span-2 col-span-4 relative">
-        <div data-scrollH="3" className="h-[2px] bg-yellow  z-40 scrollLineH w-0 absolute bottom-0"></div>
+      <div className="w-full overflow-hidden group   h-full row-span-2 col-span-4 relative">
+        <div data-scrollH="3" className="h-[2px] bg-yellow right-0 z-40 scrollLineH w-0 absolute bottom-0"></div>
         <div data-scrollV="5" className="w-[2.5px] h-0 z-40 scrollLine  left-0 top-0   bg-yellow  absolute "></div>
         <div className="h-full w-full flex flex-col relative">
           <div className="h-full w-full flex p-8 px-12">
             <p className="font-bold text-white relative z-[2]   tracking-widest uppercase text-2xl ">edjoy</p>
           </div>
 
-          <Image width={863} height={401} src={"/kid.png"} className="w-full z-[1] h-full object-cover object-center absolute top-0" />
+          <Image width={863} height={401} src={"/kid.png"} className="w-full z-[1] transition-all duration-300 ease-out group-hover:scale-105 h-full object-cover object-center absolute top-0" />
         </div>
       </div>
-      <div className="w-full   h-full row-span-3 col-span-5 relative">
-        <div data-scrollH="4" className="h-[2px] bg-yellow  z-40 scrollLineH w-0 absolute bottom-0"></div>
+      <div className="w-full overflow-hidden group   h-full row-span-3 col-span-5 relative">
+        <div data-scrollH="4" className="h-[2px] bg-yellow right-0  z-40 scrollLineH w-0 absolute bottom-0"></div>
         <div data-scrollV="6" className="w-[2.5px] h-0 z-40 scrollLine  left-0 top-0   bg-yellow  absolute "></div>
         <div className="h-full w-full flex flex-col relative  ">
           <div className="h-full w-full flex p-8 px-12">
             <p className="font-bold text-white  relative z-[2]    tracking-widest uppercase text-2xl ">asepa</p>
           </div>
-          <Image width={1057} height={612} src={"/asepa.png"} className="w-full z-[1] h-full object-cover object-center absolute top-0" />
+          <Image width={1057} height={612} src={"/asepa.png"} className="w-full transition-all duration-300 ease-out group-hover:scale-105 z-[1] h-full object-cover object-center absolute top-0" />
         </div>
       </div>
-      <div className="w-full   h-full row-span-2 col-span-4 relative">
+      <div className="w-full overflow-hidden group    h-full row-span-2 col-span-4 relative">
         <div data-scrollH="5" className="h-[2px] bg-yellow z-40  scrollLineH w-0 absolute bottom-0"></div>
         <div data-scrollV="7" className="w-[2.5px] h-0 z-40 scrollLine  left-0 top-0   bg-yellow  absolute "></div>
         <div className="h-full w-full flex flex-col relative ">
           <div className="h-full w-full flex p-8 px-12">
             <p className="font-bold  text-white relative z-[2]   tracking-widest uppercase text-2xl ">flyfra</p>{" "}
           </div>
-
-          <Image width={863} height={402} src={"/plane.png"} className="w-full z-[1] h-full object-cover object-center left-0 bottom-0 right-0 absolute top-0" />
+          <Image width={863} height={402} src={"/plane.png"} className="w-full transition-all duration-300 ease-out group-hover:scale-105 z-[1] h-full object-cover object-center left-0 bottom-0 right-0 absolute top-0" />
         </div>
       </div>
     </section>
