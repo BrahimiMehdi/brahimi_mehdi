@@ -19,16 +19,16 @@ export default function App({ Component, pageProps }: AppProps) {
       gsap.to(`.innerInfo[data-info="${number}"]`, { delay: number / 2, duration: 1, opacity: 1, ease: Power3.easeOut });
     });
     gsap.utils.toArray(".scrollLine").forEach((line:any) => {
-      let number = line.getAttribute("data-scrollV");
-      gsap.to(`.scrollLine[data-scrollV="${number}"]`, {height:"100%", scrollTrigger:{trigger:`.scrollLine[data-scrollV='${number}']`,scrub:1,start:"center bottom"} });
+      let number = line.getAttribute("data-scrollv");
+      gsap.to(`.scrollLine[data-scrollv="${number}"]`, {height:"100%", scrollTrigger:{trigger:`.scrollLine[data-scrollv='${number}']`,scrub:1,start:"center bottom"} });
     });
     gsap.utils.toArray(".scrollLineH").forEach((line:any) => {
-      let number = line.getAttribute("data-scrollH");
-      gsap.to(`.scrollLineH[data-scrollH="${number}"]`, {width:"100%", scrollTrigger:{trigger:`.scrollLine[data-scrollH='${number}']`,scrub:1,start:"top bottom"} });
+      let number = line.getAttribute("data-scrollh");
+      gsap.to(`.scrollLineH[data-scrollh="${number}"]`, {width:"100%", scrollTrigger:{trigger:`.scrollLine[data-scrollh='${number}']`,scrub:1,start:"top bottom"} });
     });
     gsap.utils.toArray(".scrollInfo").forEach((line:any) => {
-      let number = line.getAttribute("data-scrollI");
-      gsap.to(`.scrollInfo[data-scrollI="${number}"]`, {opacity:1, scrollTrigger:{trigger:`.scrollInfo[data-scrollI='${number}']`,scrub:1,start:"center bottom",end:"center center"} });
+      let number = line.getAttribute("data-scrolli");
+      gsap.to(`.scrollInfo[data-scrolli="${number}"]`, {opacity:1, scrollTrigger:{trigger:`.scrollInfo[data-scrolli='${number}']`,scrub:1,start:"center bottom",end:"center center"} });
     });
   }, []);
   return (
