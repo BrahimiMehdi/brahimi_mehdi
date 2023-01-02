@@ -14,7 +14,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="min-h-screen  bg-dark-blue ">
-        <div className="h-24">
+        <div className="h-28">
 
         </div>
         <Header />

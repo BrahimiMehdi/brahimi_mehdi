@@ -21,29 +21,29 @@ const Header = () => {
             </Link>
         </div>
       </div>
-      <div className="w-full h-full relative ">
+      <button className="w-full h-full relative ">
         <div data-line="3" className="w-[2px] bg-yellow sideLine h-0 absolute right-0"></div>
-        <LinkS data-info="2" to="/" className="h-full transition-transform duration-300 ease-out hover:scale-90 text-sm tracking-widest opacity-0 w-full  font-semibold innerInfo cursor-pointer uppercase grid place-items-center">home</LinkS>
-      </div>
-      <div className="w-full h-full relative ">
+        <LinkS data-info="2" to="/" className="h-full transition-all duration-300 ease-out hover:scale-90 text-sm tracking-widest opacity-0 w-full  font-semibold innerInfo cursor-pointer uppercase grid place-items-center">home</LinkS>
+      </button>
+      <button className="w-full h-full relative ">
         <div data-line="4" className="w-[2px] bg-yellow sideLine h-0 absolute right-0"></div>
-        <LinkS data-info="3" to="/" className="h-full transition-transform duration-300 ease-out hover:scale-90 text-sm tracking-widest opacity-0 w-full  font-semibold cursor-pointer innerInfo uppercase grid place-items-center">work</LinkS>
-      </div>
-      <div className="w-full h-full relative ">
+        <LinkS data-info="3" to="/" className="h-full transition-all duration-300 ease-out hover:scale-90 text-sm tracking-widest opacity-0 w-full  font-semibold cursor-pointer innerInfo uppercase grid place-items-center">work</LinkS>
+      </button>
+      <button className="w-full h-full relative ">
         <div data-line="5" className="w-[2px] bg-yellow sideLine h-0 absolute right-0"></div>
-        <LinkS data-info="5" to="/" className="h-full transition-transform duration-300 ease-out hover:scale-90 text-sm tracking-widest opacity-0 w-full  font-semibold cursor-pointer innerInfo uppercase grid place-items-center">about</LinkS>
-      </div>
-      <div className="w-full h-full relative ">
+        <LinkS spy={true} offset={-112} smooth={true} activeClass="text-yellow" data-info="5" to="/about" className="h-full transition-all duration-300 ease-out hover:scale-90 text-sm tracking-widest opacity-0 w-full  font-semibold cursor-pointer innerInfo uppercase grid place-items-center">about</LinkS>
+      </button>
+      <button className="w-full h-full relative ">
         <div data-line="6" className="w-[2px] bg-yellow sideLine h-0 absolute right-0"></div>
-        <LinkS data-info="6" to="/" className="h-full transition-transform duration-300 ease-out hover:scale-90 text-sm tracking-widest opacity-0 w-full  font-semibold cursor-pointer innerInfo uppercase grid place-items-center">
+        <LinkS  data-info="6" to="/contact" className="h-full transition-all duration-300 ease-out hover:scale-90 text-sm tracking-widest opacity-0 w-full  font-semibold cursor-pointer innerInfo uppercase grid place-items-center">
             contact
         </LinkS>
-      </div>
+      </button>
       <div className="w-full h-full relative ">
         <div data-line="7" className="w-[2px] bg-yellow sideLine h-0 absolute right-0"></div>
-        <div data-info="7" className="h-full innerInfo opacity-0 w-full grid place-items-center">
+        <button data-info="7" className="h-full innerInfo opacity-0 w-full grid place-items-center">
             <BsFillMoonFill className="text-2xl text-white" />
-        </div>
+        </button>
       </div>
     </header>
   );
