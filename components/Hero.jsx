@@ -26,7 +26,7 @@ const Hero = () => {
         </h1>
         <p className={`${martel_sans.className} text-2xl mr-24 tracking-wider font-light`}>Build your ideas in the real world using the latest technologies.</p>
         <div className="w-full  gap-x-12 flex items-center">
-          <button className={`w-[50%] transition-all duration-300 ease-out hover:bg-white hover:text-dark-blue hover:scale-95 uppercase tracking-widest  h-16 border-2 border-gray-100 bg-orange ${martel_sans.className}`}>start now</button>
+          <button className={`w-[50%] xl:w-[40%] transition-all duration-300 ease-out hover:bg-white hover:text-dark-blue hover:scale-95 uppercase tracking-widest  h-16 border-2 border-gray-100 bg-orange ${martel_sans.className}`}>start now</button>
           <button>
           <LinkS offset={-112} spy={true} smooth={true}  to="/about" className={`w-60 cursor-pointer uppercase hover:scale-95 transition-all duration-300 ease-out group flex items-center justify-center tracking-widest  h-16 border-2 border-orange  ${martel_sans.className}`}>
             Learn more
