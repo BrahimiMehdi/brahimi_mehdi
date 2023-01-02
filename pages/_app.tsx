@@ -26,6 +26,10 @@ export default function App({ Component, pageProps }: AppProps) {
       let number = line.getAttribute("data-scrollH");
       gsap.to(`.scrollLineH[data-scrollH="${number}"]`, {width:"100%", scrollTrigger:{trigger:`.scrollLine[data-scrollH='${number}']`,scrub:1,start:"center bottom"} });
     });
+    gsap.utils.toArray(".scrollInfo").forEach((line:any) => {
+      let number = line.getAttribute("data-scrollI");
+      gsap.to(`.scrollInfo[data-scrollI="${number}"]`, {opacity:1, scrollTrigger:{trigger:`.scrollInfo[data-scrollI='${number}']`,scrub:1,start:"center bottom",end:"center center"} });
+    });
   }, []);
   return (
     <>
