@@ -44,7 +44,7 @@ const Hero = () => {
         <div data-line="10" className="w-[2.5px] h-0 sideLine right-0 top-0   bg-yellow  absolute "></div>
 
         <div ref={image} className="w-full opacity-0 h-full p-12 grid place-items-center">
-          <Image width={763} height={631.95} className="h-full w-full object-contain" src="/cuate.svg" alt="" />
+          <Image lt="picture contains  a light bulb" width={763} height={631.95} className="h-full w-full object-contain" src="/cuate.svg" alt="" />
         </div>
       </div>
       <div id="topers" className="h-[2px] bg-yellow  w-0 absolute bottom-0"></div>

@@ -62,7 +62,7 @@ const Work = () => {
             <p className="font-bold text-white relative z-[2]   tracking-widest uppercase text-2xl ">edjoy</p>
           </div>
 
-          <Image width={863} height={401} src={"/kid.png"} className="w-full z-[1] transition-all duration-300 ease-out group-hover:scale-105 h-full object-cover object-center absolute top-0" />
+          <Image lt="picture contains a smiling kid" width={863} height={401} src={"/kid.png"} className="w-full z-[1] transition-all duration-300 ease-out group-hover:scale-105 h-full object-cover object-center absolute top-0" />
         </div>
       </div>
       <div onClick={()=>changeState("asepa")} className={`w-full workChild cursor-pointer overflow-hidden group ${selected.sec === "asepa"  ? "col-start-1 cursor-default col-end-10 row-start-1 row-end-4" : selected.on ? "col-start-7 col-end-10 row-start-4 row-end-5" :"row-start-2 row-end-5 col-start-1 col-end-6"}  h-full  relative`}>
@@ -72,7 +72,7 @@ const Work = () => {
           <div className="h-full w-full flex p-8 px-12">
             <p className="font-bold text-white  relative z-[2]    tracking-widest uppercase text-2xl ">asepa</p>
           </div>
-          <Image width={1057} height={612} src={"/asepa.png"} className="w-full transition-all duration-300 ease-out group-hover:scale-105 z-[1] h-full object-cover object-center absolute top-0" />
+          <Image  lt="picture contains a member of asepa" width={1057} height={612} src={"/asepa.png"} className="w-full transition-all duration-300 ease-out group-hover:scale-105 z-[1] h-full object-cover object-center absolute top-0" />
         </div>
       </div>
       <div onClick={()=>changeState("flyfra")} className={`w-full workChild cursor-pointer overflow-hidden group h-full ${selected.sec === "flyfra"  ? "col-start-1 cursor-default col-end-10 row-start-1 row-end-4" : selected.on && selected.sec ==="edjoy" ? "col-start-4 col-end-7 row-start-4 row-end-5"  : selected.on ? "row-start-4 row-end-5 col-start-7 col-end-10" :"row-span-2 col-span-4"} relative`}>
@@ -82,7 +82,7 @@ const Work = () => {
           <div className="h-full w-full flex p-8 px-12">
             <p className="font-bold  text-white relative z-[2]   tracking-widest uppercase text-2xl ">flyfra</p>{" "}
           </div>
-          <Image width={863} height={402} src={"/plane.png"} className="w-full transition-all duration-300 ease-out group-hover:scale-105 z-[1] h-full object-cover object-center left-0 bottom-0 right-0 absolute top-0" />
+          <Image lt="picture contains a plane" width={863} height={402} src={"/plane.png"} className="w-full transition-all duration-300 ease-out group-hover:scale-105 z-[1] h-full object-cover object-center left-0 bottom-0 right-0 absolute top-0" />
         </div>
       </div>
     </section>
