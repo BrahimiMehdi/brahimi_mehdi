@@ -28,7 +28,7 @@ const Hero = () => {
         <div className="w-full  gap-x-12 flex items-center">
           <button className={`w-[50%] transition-all duration-300 ease-out hover:bg-white hover:text-dark-blue hover:scale-95 uppercase tracking-widest  h-16 border-2 border-gray-100 bg-orange ${martel_sans.className}`}>start now</button>
           <button>
-          <LinkS spy={true} smooth={true} offset="" to="/about" className={`w-60 cursor-pointer uppercase hover:scale-95 transition-all duration-300 ease-out group flex items-center justify-center tracking-widest  h-16 border-2 border-orange  ${martel_sans.className}`}>
+          <LinkS offset={-112} spy={true} smooth={true}  to="/about" className={`w-60 cursor-pointer uppercase hover:scale-95 transition-all duration-300 ease-out group flex items-center justify-center tracking-widest  h-16 border-2 border-orange  ${martel_sans.className}`}>
             Learn more
             <IoIosArrowDown className=" text-white relative bottom-[1px] transition-all duration-300 ease-out left-3 text-xl group-hover:opacity-100 opacity-0" />
           </LinkS>
