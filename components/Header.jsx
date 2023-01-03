@@ -6,7 +6,7 @@ import {BsFillMoonFill} from "react-icons/bs"
 const Header = () => {
 
   return (
-    <header className="w-full grid fixed top-0 z-50  bg-dark-blue  h-28 grid-cols-9  text-white  ">
+    <header className="w-full grid  fixed top-0 z-50  bg-dark-blue  h-28 grid-cols-9  text-white  ">
       <div id="topers" className="h-[2px] bg-yellow  w-0 absolute top-0"></div>
       <div id="topers" className="h-[2px] bg-yellow  w-0 absolute bottom-0"></div>
 
@@ -27,15 +27,16 @@ const Header = () => {
       </button>
       <button className="w-full h-full relative ">
         <div data-line="4" className="w-[2px] bg-yellow sideLine h-0 absolute left-0"></div>
-        <LinkS offset={-112} spy={true} smooth={true} activeClass="text-yellow" data-info="3" to="/work" className="h-full transition-all duration-300 ease-out hover:scale-90 text-sm tracking-widest opacity-0 w-full  font-semibold cursor-pointer innerInfo uppercase grid place-items-center">work</LinkS>
+        <LinkS spy={true} offset={-112} smooth={true} activeClass="text-yellow" data-info="3" to="/about" className="h-full transition-all duration-300 ease-out hover:scale-90 text-sm tracking-widest opacity-0 w-full  font-semibold cursor-pointer innerInfo uppercase grid place-items-center">about</LinkS>
       </button>
       <button className="w-full h-full relative ">
         <div data-line="5" className="w-[2px] bg-yellow sideLine h-0 absolute left-0"></div>
-        <LinkS spy={true} offset={-112} smooth={true} activeClass="text-yellow" data-info="5" to="/about" className="h-full transition-all duration-300 ease-out hover:scale-90 text-sm tracking-widest opacity-0 w-full  font-semibold cursor-pointer innerInfo uppercase grid place-items-center">about</LinkS>
+        <LinkS offset={-112} spy={true} smooth={true} activeClass="text-yellow" data-info="5" to="/work" className="h-full transition-all duration-300 ease-out hover:scale-90 text-sm tracking-widest opacity-0 w-full  font-semibold cursor-pointer innerInfo uppercase grid place-items-center">work</LinkS>
       </button>
+      
       <button className="w-full h-full relative ">
         <div data-line="6" className="w-[2px] bg-yellow sideLine h-0 absolute left-0"></div>
-        <LinkS  data-info="6" to="/contact" className="h-full transition-all duration-300 ease-out hover:scale-90 text-sm tracking-widest opacity-0 w-full  font-semibold cursor-pointer innerInfo uppercase grid place-items-center">
+        <LinkS offset={-112} spy={true} smooth={true} activeClass="text-yellow"  data-info="6" to="/contact" className="h-full transition-all duration-300 ease-out hover:scale-90 text-sm tracking-widest opacity-0 w-full  font-semibold cursor-pointer innerInfo uppercase grid place-items-center">
             contact
         </LinkS>
       </button>

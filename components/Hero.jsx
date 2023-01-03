@@ -19,7 +19,7 @@ const Hero = () => {
     }, [])
     
   return (
-    <section name="/" className="w-full  grid relative text-white grid-cols-9">
+    <section name="/" className="w-full mt-28 snap-center  grid relative text-white grid-cols-9">
       <div ref={content} className="w-full opacity-0 gap-y-8 p-8 py-16 h-full relative flex flex-col col-span-5">
         <h1 className="font-bold tracking-wide uppercase text-5xl leading-normal">
           turn your <span className="text-yellow">idea</span> into <br /> <span>a reality</span>
