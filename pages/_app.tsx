@@ -32,7 +32,7 @@ export default function App({ Component, pageProps }: AppProps) {
       let number = line.getAttribute("data-scrolli");
       gsap.to(`.scrollInfo[data-scrolli="${number}"]`, {opacity:1, scrollTrigger:{trigger:`.scrollInfo[data-scrolli='${number}']`,scrub:1,start:"center bottom",end:"center center"} });
     });
-  }, [router]);
+  }, [router.asPath]);
   return (
     <>
       <style jsx global>
