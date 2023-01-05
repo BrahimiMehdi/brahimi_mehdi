@@ -15,6 +15,9 @@ export default function Home() {
       </Head>
       <main className="min-h-screen relative  bg-dark-blue ">
         <Header />
+        <div className="h-28 bg-dark-blue">
+
+        </div>
         <Hero />
         <About />
         <Work />

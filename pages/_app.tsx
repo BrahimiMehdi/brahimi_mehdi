@@ -5,8 +5,10 @@ const montserrat = Montserrat({ subsets: ["latin"] });
 import { gsap, Power3 } from "gsap";
 import { useEffect } from "react";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { useRouter } from "next/router";
 export default function App({ Component, pageProps }: AppProps) {
   const tl = gsap.timeline();
+  const router = useRouter();
   gsap.registerPlugin(ScrollTrigger);
   useEffect(() => {
     tl.to("#topers", { width: "100%", duration: 5, ease: Power3.easeOut });
@@ -30,7 +32,7 @@ export default function App({ Component, pageProps }: AppProps) {
       let number = line.getAttribute("data-scrolli");
       gsap.to(`.scrollInfo[data-scrolli="${number}"]`, {opacity:1, scrollTrigger:{trigger:`.scrollInfo[data-scrolli='${number}']`,scrub:1,start:"center bottom",end:"center center"} });
     });
-  }, []);
+  }, [router]);
   return (
     <>
       <style jsx global>

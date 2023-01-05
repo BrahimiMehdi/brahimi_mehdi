@@ -36,7 +36,7 @@ const Work = () => {
     
     }
   return (
-    <section   name="/work" className="h-screen max-h-screen snap-start workParent grid-rows-4 w-full relative grid grid-cols-9">
+    <section   name="/work" className={`h-screen  snap-start workParent grid-rows-4 w-full  grid grid-cols-9`}>
       {/* work sec */}
       <div onClick={()=>changeState("")} data-scrolli="3" className={`w-full workChild cursor-pointer scrollInfo  h-full  relative ${selected.on ? "col-span-3" : "col-span-5 cursor-default"}  row-span-1`}>
         <div data-scrollv="4" className={`w-[2.5px] h-0 z-40 scrollLine ${selected.on ? "opacity-0" :"opacity-100"} transition-all duration-300 ease-out   left-0 top-0   bg-yellow  absolute `}></div>
