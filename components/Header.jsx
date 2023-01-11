@@ -7,7 +7,7 @@ import {BsFillMoonFill} from "react-icons/bs"
 const Header = () => {
 
   return (
-    <header className="w-full grid  fixed top-0 z-50  bg-dark-blue  h-28 grid-cols-9  text-white  ">
+    <header className="w-full grid  fixed top-0 z-50 bg-opacity-80 bg-dark-blue backdrop-blur  h-28 grid-cols-9  text-white  ">
       <div id="topers" className="h-[2px] bg-yellow  w-0 absolute top-0"></div>
       <div id="topers" className="h-[2px] bg-yellow  w-0 absolute bottom-0"></div>
 
