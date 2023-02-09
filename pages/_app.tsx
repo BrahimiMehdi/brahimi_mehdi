@@ -1,7 +1,7 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import { Montserrat } from "@next/font/google";
-const montserrat = Montserrat({ subsets: ["latin"] });
+const montserrat = Montserrat({ subsets: ["latin-ext"],variable: '--font-mont',});
 import { gsap, Power3 } from "gsap";
 import { useEffect } from "react";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -26,7 +26,7 @@ export default function App({ Component, pageProps }: AppProps) {
     });
     gsap.utils.toArray(".scrollLineH").forEach((line:any) => {
       let number = line.getAttribute("data-scrollh");
-      gsap.to(`.scrollLineH[data-scrollh="${number}"]`, {width:"100%", scrollTrigger:{trigger:`.scrollLine[data-scrollh='${number}']`,scrub:1,start:"top bottom"} });
+      gsap.to(`.scrollLineH[data-scrollh="${number}"]`, {width:"100%", scrollTrigger:{trigger:`.scrollLineH[data-scrollh='${number}']`,scrub:1,start:"top bottom"} });
     });
     gsap.utils.toArray(".scrollInfo").forEach((line:any) => {
       let number = line.getAttribute("data-scrolli");
@@ -34,15 +34,8 @@ export default function App({ Component, pageProps }: AppProps) {
     });
   }, [router.asPath]);
   return (
-    <>
-      <style jsx global>
-        {`
-          html {
-            font-family: ${montserrat.style.fontFamily};
-          }
-        `}
-      </style>
+    <div className={`${montserrat.className} font-Montserrat `}>
       <Component {...pageProps} />
-    </>
+    </div>
   );
 }
