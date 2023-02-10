@@ -18,6 +18,7 @@ const Services = () => {
           trigger: container.current,
           scrub: 1,
           pin: true,
+          pinSPacing:false,
           end: "+=2000",
         },
       });

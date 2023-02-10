@@ -26,11 +26,13 @@ const Hero = () => {
         </h1>
         <p className={` text-2xl mr-24 tracking-wider font-light`}>Build your ideas in the real world using the latest technologies.</p>
         <div className="w-full  gap-x-12 flex items-center">
-          <button className={`w-[50%] xl:w-[40%] transition-all duration-300 ease-out hover:bg-white hover:text-dark-blue hover:border-orange  uppercase tracking-widest  h-16 border-2 border-gray-100 bg-orange `}>start now</button>
+          <button className={`w-[50%] intersect font-medium xl:w-[40%] grid place-items-center relative transition-all group duration-300 ease-out hover:bg-blue    uppercase tracking-widest  h-16 border-2 border-gray-100 bg-orange `}>
+            <span className=" absolute transition-all duration-300 ease-in-out text-white">start now</span>
+          </button>
           <button>
-          <LinkS offset={-112} spy={true} smooth={true}  to="/about" className={`w-60 cursor-pointer uppercase hover:border-white transition-all duration-300 ease-out group flex items-center justify-center tracking-widest  h-16 border-2 border-orange  `}>
+          <LinkS offset={-112} spy={true} smooth={true}  to="/about" className={`w-60 intersect cursor-pointer uppercase border-white transition-all duration-300 ease-out group flex items-center justify-center tracking-widest  h-16 border-2   `}>
             Learn more
-            <IoIosArrowDown className=" text-white relative bottom-[1px] transition-all duration-300 ease-out left-3 text-xl group-hover:opacity-100 opacity-0" />
+            <IoIosArrowDown className=" text-white intersect relative bottom-[1px] transition-all duration-300 ease-out left-3 text-xl group-hover:opacity-100 opacity-0" />
           </LinkS>
           </button>
           
