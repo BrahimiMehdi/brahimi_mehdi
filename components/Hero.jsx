@@ -19,9 +19,9 @@ const Hero = () => {
     }, [])
     
   return (
-    <section name="/" className="w-full  snap-center  grid relative text-white grid-cols-9">
+    <section name="/" className="w-full h-[80vh] snap-center  grid relative text-white grid-cols-9">
       <div ref={content} className="w-full opacity-0 gap-y-8 p-8 py-16 h-full relative flex flex-col col-span-5">
-        <h1 className="font-bold tracking-wide uppercase text-5xl leading-normal">
+        <h1 className="font-bold  tracking-wide uppercase text-6xl leading-normal">
           turn your <span className="text-yellow">idea</span> into <br /> <span>a reality</span>
         </h1>
         <p className={` text-2xl mr-24 tracking-wider font-light`}>Build your ideas in the real world using the latest technologies.</p>
@@ -37,19 +37,19 @@ const Hero = () => {
           </button>
           
         </div>
-        <div data-line="8" className="w-[2.5px] h-0 sideLine left-0 top-0   bg-yellow  absolute "></div>
+        <div data-line="8" className="w-[1px] h-0 sideLine left-0 top-0   bg-yellow  absolute "></div>
 
       </div>
       <div className="w-full  h-full relative col-span-4">
-      <div data-line="9" className="w-[2.5px] h-0 sideLine left-0 top-0   bg-yellow  absolute "></div>
+      <div data-line="9" className="w-[1px] h-0 sideLine left-0 top-0   bg-yellow  absolute "></div>
 
-        <div data-line="10" className="w-[2.5px] h-0 sideLine right-0 top-0   bg-yellow  absolute "></div>
+        <div data-line="10" className="w-[1px] h-0 sideLine right-0 top-0   bg-yellow  absolute "></div>
 
-        <div ref={image} className="w-full opacity-0 h-full p-12 grid place-items-center">
-          <Image lt="picture contains  a light bulb" width={763} height={631.95} className="h-full w-full object-contain" src="/cuate.svg" alt="" />
+        <div ref={image} className="w-full opacity-0 h-full  grid place-items-center">
+          <Image lt="picture contains  a light bulb" width={763} height={631.95} className="h-full w-full object-cover object-center" src="/services.jpg" alt="" />
         </div>
       </div>
-      <div id="topers" className="h-[2px] bg-yellow  w-0 absolute bottom-0"></div>
+      <div id="topers" className="h-[1px] bg-yellow  w-0 absolute bottom-0"></div>
     </section>
   );
 };

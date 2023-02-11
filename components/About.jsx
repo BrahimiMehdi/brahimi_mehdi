@@ -11,11 +11,11 @@ const About = () => {
         <p className={`${hind_Guntur.className} text-gray-50 text-justify leading-normal text-2xl mr-24 tracking-wider font-light`}>
           I’m a developer with 5+ years of experience. <br /> I've worked with numerous clients and associations around the globe to build eye catching websites.
         </p>
-        <div data-scrollv="1" className="w-[2.5px] h-0 scrollLine  left-0 top-0   bg-yellow  absolute "></div>
+        <div data-scrollv="1" className="w-[1px] h-0 scrollLine  left-0 top-0   bg-yellow  absolute "></div>
       </div>
       <div  data-scrolli="2" className="col-span-5 scrollInfo opacity-0  relative">
-        <div data-scrollv="2" className="w-[2.5px] h-0  scrollLine left-0 top-0   bg-yellow  absolute "></div>
-        <div data-scrollv="3" className="w-[2.5px] h-0  scrollLine right-0 top-0   bg-yellow  absolute "></div>
+        <div data-scrollv="2" className="w-[1px] h-0  scrollLine left-0 top-0   bg-yellow  absolute "></div>
+        <div data-scrollv="3" className="w-[1px] h-0  scrollLine right-0 top-0   bg-yellow  absolute "></div>
         <div className="px-16 flex  flex-col gap-y-8 h-full w-full p-8">
           <p className="font-bold text-white tracking-wide uppercase text-5xl ">skills</p>
           <p className={`${hind_Guntur.className} text-gray-50 leading-normal text-justify text-2xl  tracking-wider font-light`}>I make jam-stack websites using next-js and react as a framework with graph-ql for data fetching, alongside tailwindCSS for styling, and figma for design.</p>
@@ -95,7 +95,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div data-scrollh="1" className="h-[2px] bg-yellow  scrollLineH w-0 absolute bottom-0"></div>
+      <div data-scrollh="1" className="h-[1px] bg-yellow  scrollLineH w-0 absolute bottom-0"></div>
     </section>
   );
 };

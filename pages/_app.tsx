@@ -5,6 +5,7 @@ const montserrat = Montserrat({
   subsets: ["latin-ext"],
   variable: "--font-mont",
 });
+import Lenis from '@studio-freight/lenis'
 import { gsap, Power3 } from "gsap";
 import { useEffect } from "react";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -14,6 +15,26 @@ export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
   gsap.registerPlugin(ScrollTrigger);
   useEffect(() => {
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
+      gestureDirection: 'vertical', // vertical, horizontal, both
+      smooth: true,
+      mouseMultiplier: 1,
+      smoothTouch: false,
+      touchMultiplier: 2,
+      // infinite: false,
+    })
+    const raf =(time:any)=>{
+      lenis.raf(time);
+      requestAnimationFrame(raf)
+    }
+    requestAnimationFrame(raf)
+  }, [])
+  
+  useEffect(() => {
+    
+
     const context =gsap.context(()=>{
       tl.to("#topers", { width: "100%", duration: 5, ease: Power3.easeOut });
     gsap.set(".ball", { xPercent: -50, yPercent: -50 });
@@ -42,10 +63,10 @@ export default function App({ Component, pageProps }: AppProps) {
     })
     images.forEach((item)=>{
       item.addEventListener("mouseenter",(e)=>{
-          gsap.to(".ball",{width:"50px",height:"50px",borderColor:"rgb(236 252 203)",background:"transparent",scale:2,duration:0.2})
+          gsap.to(".ball",{width:"50px",height:"50px",color:"white",borderColor:"rgb(236 252 203)",background:"transparent",scale:2,duration:0.2})
       })
       item.addEventListener("mouseleave",(e)=>{
-          gsap.to(".ball",{width:"16px",height:"16px",background:"rgb(236 252 203)",scale:1,duration:0.2})
+          gsap.to(".ball",{width:"16px",height:"16px",color:"transparent",background:"rgb(236 252 203)",scale:1,duration:0.2})
       })
     })
     gsap.ticker.add(() => {
@@ -114,7 +135,7 @@ export default function App({ Component, pageProps }: AppProps) {
     }
   }, [router.asPath]);
   return (
-    <div className={`${montserrat.className} font-Montserrat `}>
+    <div className={`${montserrat.className} antialiased  selection:bg-orange selection:bg-opacity-60 font-Montserrat `}>
       <Component {...pageProps} />
     </div>
   );

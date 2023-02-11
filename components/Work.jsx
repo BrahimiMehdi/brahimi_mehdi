@@ -41,8 +41,14 @@ const Work = () => {
   return (
     <section
       name="/work"
-      className={` h-[calc(100vh-7rem)]  snap-start workParent grid-rows-4 w-full  grid grid-cols-9`}
+      className={` h-[calc(100vh-7rem)] relative snap-start workParent grid-rows-4 w-full  grid grid-cols-9`}
     >
+      <div
+          data-scrollh="22"
+          className={`h-[1.5px] bg-yellow ${
+            selected.on ? "opacity-0" : "opacity-100"
+          } transition-all duration-300 ease-out   z-40 scrollLineH w-0 absolute top-0`}
+        ></div>
       {/* work sec */}
       <div
         onClick={() => changeState("")}
@@ -53,7 +59,7 @@ const Work = () => {
       >
         <div
           data-scrollv="4"
-          className={`w-[2.5px] h-0 z-40 scrollLine ${
+          className={`w-[1px] h-0 z-40 scrollLine ${
             selected.on ? "opacity-0" : "opacity-100"
           } transition-all duration-300 ease-out   left-0 top-0   bg-yellow  absolute `}
         ></div>
@@ -84,7 +90,7 @@ const Work = () => {
         </div>
         <div
           data-scrollh="2"
-          className={`h-[2px] bg-yellow ${
+          className={`h-[1px] bg-yellow ${
             selected.on ? "opacity-0" : "opacity-100"
           } transition-all duration-300 ease-out   z-40 scrollLineH w-0 absolute bottom-0`}
         ></div>
@@ -102,13 +108,13 @@ const Work = () => {
       >
         <div
           data-scrollh="3"
-          className={`h-[2px] ${
+          className={`h-[1px] ${
             selected.on ? "opacity-0" : "opacity-100"
           } transition-all duration-300 ease-out bg-yellow right-0 z-40 scrollLineH w-0 absolute bottom-0`}
         ></div>
         <div
           data-scrollv="5"
-          className={`w-[2.5px] h-0 z-40 ${
+          className={`w-[1px] h-0 z-40 ${
             selected.on ? "opacity-0" : "opacity-100"
           } transition-all duration-300 ease-out scrollLine  left-0 top-0   bg-yellow  absolute`}
         ></div>
@@ -140,7 +146,7 @@ const Work = () => {
       >
         <div
           data-scrollv="6"
-          className={`w-[2.5px] h-0 z-40 scrollLine ${
+          className={`w-[1px] h-0 z-40 scrollLine ${
             selected.on ? "opacity-0" : "opacity-100"
           } transition-all duration-300 ease-out  left-0 top-0   bg-yellow  absolute `}
         ></div>
@@ -173,7 +179,7 @@ const Work = () => {
       >
         <div
           data-scrollv="7"
-          className={`w-[2.5px] h-0 z-40 scrollLine ${
+          className={`w-[1px] h-0 z-40 scrollLine ${
             selected.on ? "opacity-0" : "opacity-100"
           } transition-all duration-300 ease-out left-0 top-0   bg-yellow  absolute`}
         ></div>

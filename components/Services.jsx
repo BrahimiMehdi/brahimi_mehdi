@@ -1,110 +1,176 @@
-import { gsap } from "gsap";
+import { gsap, Power3 } from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { TfiWrite } from "react-icons/tfi";
+// gsap.to(title.current, {
+//   keyframes: {
+//     //   xPercent: [-50, 100, 100, -100, -150, -200],
+//     //   y: [0, 0, 50, 100, 100, 0],
+//     xPercent: [-0, -0, -0, -200],
+//     scale: [1, 1.2, 1.3, 1.5],
+//     ease: "power1.inOut",
+//   },
+//   scrollTrigger: {
+//     trigger: container.current,
+//     scrub: 1,
+//     end: "+=2000",
+//   },
+//   duration: 2,
+// });
+
+
 const Services = () => {
+  const cards = [
+  
+    {
+      title: "Full stack development",
+      image: "bg-[url('/web.jpg')] ",
+      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi maxime cumque eveniet a alias aliquid aperiam quo saepe officia. Magni reiciendis nihil quo quibusdam sequi soluta veniam consectetur recusandae nam.",
+    },
+   
+    {
+      title: "UI/UX Design",
+      image: "bg-[url('/ui.jpg')] ",
+      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi maxime cumque eveniet a alias aliquid aperiam quo saepe officia. Magni reiciendis nihil quo quibusdam sequi soluta veniam consectetur recusandae nam.",
+    },
+    {
+      title: "Ecommerce",
+      image: "bg-[url('/ecommerce.jpg')] ",
+      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi maxime cumque eveniet a alias aliquid aperiam quo saepe officia. Magni reiciendis nihil quo quibusdam sequi soluta veniam consectetur recusandae nam.",
+    },
+    {
+      title: "Website redesign",
+      image: "bg-[url('/ux.jpg')] ",
+      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi maxime cumque eveniet a alias aliquid aperiam quo saepe officia. Magni reiciendis nihil quo quibusdam sequi soluta veniam consectetur recusandae nam.",
+    },
+    {
+      title: "SEO and marketting",
+      image: "bg-[url('/seo2.jpg')] ",
+      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi maxime cumque eveniet a alias aliquid aperiam quo saepe officia. Magni reiciendis nihil quo quibusdam sequi soluta veniam consectetur recusandae nam.",
+    },
+    {
+      title: "Content creation",
+      image: "bg-[url('/seo.jpg')] ",
+      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi maxime cumque eveniet a alias aliquid aperiam quo saepe officia. Magni reiciendis nihil quo quibusdam sequi soluta veniam consectetur recusandae nam.",
+    },
+  ];
+  
   gsap.registerPlugin(ScrollTrigger);
   const container = useRef();
   const scrollContainer = useRef();
-  const title = useRef();
-  const secondaryTitle = useRef();
+  const imageCont = useRef();
+  const cardsContainer = useRef();
+  const [current, setCurrent] = useState("");
+  const handleClick =(input)=>{
+    setCurrent((old)=> old !==input ? input :"")
+  }
   useEffect(() => {
     let ctx = gsap.context(() => {
+      const cards = gsap.utils.toArray(".card");
       const sections = gsap.utils.toArray(".serviceSection");
-      gsap.to(sections, {
+      const containerAnim = gsap.to(sections, {
         xPercent: -100 * (sections.length - 1),
         ease: "none",
+        delay: 0.2,
         scrollTrigger: {
           trigger: container.current,
           scrub: 1,
           pin: true,
-          pinSPacing:false,
+          pinSPacing: false,
+          // snap: {
+          //   snapTo: 0.5,
+          //   duration: 0.3,
+          //   ease: Power3.easeInOut
+          // },
           end: "+=2000",
         },
       });
-      gsap.to(title.current, {
-        keyframes: {
-          //   xPercent: [-50, 100, 100, -100, -150, -200],
-          //   y: [0, 0, 50, 100, 100, 0],
-          xPercent: [-0, -0, -0, -200],
-          scale: [1, 1.2, 1.3, 1.5],
-          ease: "power1.inOut",
-        },
-        scrollTrigger: {
-          trigger: container.current,
-          scrub: 1,
-          end: "+=2000",
-        },
-        duration: 2,
+      cards.forEach((card) => {
+        gsap.to(card, {
+          scale: 1,
+          backgroundPositionX: "0%",
+          ease: Power3.easeInOut,
+          duration: 2,
+          scrollTrigger: {
+            trigger: cardsContainer.current,
+            containerAnimation: containerAnim,
+            scrub: 1,
+            // start:"-=300",
+            // end:"-=0"
+          },
+        });
+      });
+
+      gsap.to(imageCont.current, {
+        clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+        scale: 1,
+        backgroundPositionY:"55",
+        scrollTrigger: { trigger: container.current, scrub: 1, end: "+=1000" },
       });
     });
-    gsap.to(secondaryTitle.current, {
-      keyframes: {
-        //   xPercent: [-50, 100, 100, -100, -150, -200],
-        //   y: [0, 0, 50, 100, 100, 0],
-        xPercent: [-0, -0, -0, -200],
-        scale: [1, 1.2, 1.3, 1.5],
-        ease: "power1.inOut",
-      },
-      scrollTrigger: {
-        trigger: container.current,
-        scrub: 1,
-        end: "+=2000",
-      },
-      duration: 2,
-    });
+
     return () => ctx.revert();
   }, []);
 
   return (
     <div
       ref={container}
-      className=" overflow-x-hidden bg-[url('/service.jpg')] bg-cover bg-center relative h-screen w-full  flex flex-row"
+      className=" overflow-hidden    relative h-screen w-full  flex flex-row"
     >
       <div
-        data-scrollv="20"
-        className={`w-[2.5px] h-0 z-40 transition-all duration-300 ease-out scrollLine  left-0 top-0   bg-yellow  absolute`}
-      ></div>
-      <p
-        ref={title}
-        className=" text-5xl  text-white font-bold absolute top-40 left-[50%] z-20 translate-x-[-50%] uppercase"
+        ref={imageCont}
+        className="absolute grid  z-[6] place-items-center  scale-125 bg-cover bg-center bg-[url('/bg.jpg')] top-0 left-0 h-full w-full [clip-path:_polygon(40%_40%,_60%_40%,_60%_60%,_40%_60%);] "
       >
-        Services
-      </p>
+          <p className=" text-9xl   text-white relative select-text font-bold uppercase">services</p>
+      </div>
+      <div
+        data-scrollv="20"
+        className={`w-[1px] h-0 z-40 transition-all duration-300 ease-out scrollLine  left-0 top-0   bg-yellow  absolute`}
+      ></div>
 
       <div
         ref={scrollContainer}
-        className="w-[300vw] mainContainer   h-full  flex "
+        className="w-[300vw] mainContaine   snap-center snap-always snap-mandatory snap-x   h-full  flex "
       >
-        <section className="w-screen pb-16 bg-cover bg-center  gap-y-12 h-full flex items-center flex-col px-8 pt-64 serviceSection "></section>
-        <section className="w-screen pb-16 bg-blue bg-opacity-80 justify-between backdrop-blur-md  gap-y-12 h-full flex items-center flex-col px-8 pt-64 serviceSection ">
-          <svg
-            ref={secondaryTitle}
-            className="w-64"
-            viewBox="0 0 132 8"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M131.354 4.35355C131.549 4.15829 131.549 3.84171 131.354 3.64645L128.172 0.464466C127.976 0.269204 127.66 0.269204 127.464 0.464466C127.269 0.659728 127.269 0.976311 127.464 1.17157L130.293 4L127.464 6.82843C127.269 7.02369 127.269 7.34027 127.464 7.53553C127.66 7.7308 127.976 7.7308 128.172 7.53553L131.354 4.35355ZM0 4.5H131V3.5H0V4.5Z"
-              fill="white"
-            />
-          </svg>
-          <div className="w-full max-h-96 h-full gap-8 grid grid-cols-3 ">
-            <div className="bg-black p-8 outline outline-yellow  rounded-sm bg-opacity-40 backdrop-blur-md">
-                <div className="flex items-center gap-x-8">
-                <TfiWrite className="text-5xl text-white" />
-                <p className="uppercase text-white font-bold text-2xl">SEO</p>
-                </div>
+        <section className="w-screen relative z-[3]  snap-mandatory pb-16 bg-cover bg-center  gap-y-12 h-full flex items-center flex-col px-8 pt-64 serviceSection "></section>
+        <section
+          ref={cardsContainer}
+          className="w-[200vw]  relative z-[7] snap-mandatory grid grid-cols-6 pt-28  h-full  serviceSection "
+        >
+          {cards.map((card, index) => (
+            <div
+              onClick={() => handleClick(card.title)}
+              key={index}
+              className={`${card.image} py-16 px-12  flex flex-col items-center relative  bg-cover  w-full overflow-hidden group   bg-center card intersectImage h-full  `}
+            >
+              <p
+                className={`text-6xl  transition-all duration-500 ease-in-out ${
+                  card.title === current
+                    ? "text-dark-blue -translate-y-4"
+                    : " text-white"
+                } tracking-wide relative z-[4] uppercase  font-bold`}
+              >
+                {card.title}
+              </p>
+              <div className="h-full z-[1] w-full bg-gradient-to-b absolute top-0 opacity-80 left-0 from-dark-blue to-transparent bg-cover"></div>
+
+              <div
+                className={`h-full p-4 flex flex-col items-center top-0 left-0  absolute  ${
+                  card.title === current
+                    ? "[clip-path:_polygon(0_0,_100%_0,_100%_100%,_0%_100%);]"
+                    : " [clip-path:_polygon(0_0,_0_0,_0_100%,_0%_100%);] "
+                } transition-all duration-500 ease-in-out z-[2] w-full bg-stone-100 `}
+              >
+                <p
+                  className={`text-3xl absolute top-[50%] -translate-y-[50%] px-4 text-left transition-all duration-500 ease-in-out leading-10 tracking-wide text-dark-blue ${
+                    card.title === current ? " opacity-100" : "opacity-0"
+                  }`}
+                >
+                  {card.text}
+                </p>
+              </div>
             </div>
-            <div className="bg-black  outline outline-yellow rounded-sm bg-opacity-40 backdrop-blur-md"></div>
-            <div className="bg-black  outline outline-yellow rounded-sm bg-opacity-40 backdrop-blur-md"></div>
-          </div>
-        </section>
-        <section className="w-screen pb-16 bg-transparent  gap-y-12 h-full flex justify-end flex-col px-8 pt-40 serviceSection ">
-          {/* <div className="w-full h-full gap-8 grid  ">
-            <div className="bg-black  outline outline-yellow rounded-sm bg-opacity-40 backdrop-blur-md"></div>
-          </div> */}
+          ))}
         </section>
       </div>
     </div>

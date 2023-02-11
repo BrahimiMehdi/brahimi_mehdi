@@ -7,6 +7,13 @@
   padding:0;
   box-sizing:border-box;
 }
+html,body{
+  width: 100%;
+  overscroll-behavior: none;
+  min-height: 100%;
+}
+
+
 .slides-container {
   position: relative;
   overflow: hidden;  
