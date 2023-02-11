@@ -11,14 +11,14 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer ref={footerCont}  className="w-full overflow-hidden text-white  relative   snap-center    grid grid-cols-9">
-      <div className={`h-[2px] bg-yellow z-40  transition-all duration-300 ease-out footerScrollH w-0 absolute top-0`}></div>
-      <div className={`w-[2.5px] h-0 z-40 footerScroll transition-all duration-300 ease-out left-0 top-0   bg-yellow  absolute`}></div>
+    <footer ref={footerCont}  className="w-full overflow-hidden text-white  relative   snap-center    grid md:grid-cols-9">
+      <div className={`h-[1px] bg-yellow z-40  transition-all duration-300 ease-out footerScrollH w-0 absolute top-0`}></div>
+      <div className={`w-[1px] h-0 z-40 footerScroll transition-all duration-300 ease-out left-0 top-0   bg-yellow  absolute`}></div>
 
-      <div className={`h-[2px] bg-yellow z-40  transition-all duration-300 ease-out footerScrollH w-0 absolute bottom-0`}></div>
+      <div className={`h-[1px] bg-yellow z-40  transition-all duration-300 ease-out footerScrollH w-0 absolute bottom-0`}></div>
 
-      <div className="w-full h-full flex flex-col relative col-span-7 justify-center gap-y-16 p-8">
-        <svg className="w-52 absolute right-0" viewBox="0 0 405 349" fill="none">
+      <div className="w-full h-full flex flex-col relative md:col-span-7 justify-center gap-y-16 p-8">
+        <svg className="w-52 absolute lg:block hidden right-0" viewBox="0 0 405 349" fill="none">
           <path d="M53.1168 121.806C70.3852 121.806 84.3841 107.807 84.3841 90.5388C84.3841 73.2703 70.3852 59.2715 53.1168 59.2715C35.8483 59.2715 21.8495 73.2703 21.8495 90.5388C21.8495 107.807 35.8483 121.806 53.1168 121.806Z" fill="white" stroke="#2E353A" strokeLinecap="round" strokeLinejoin="round" />
           <path d="M50.7895 118.701C68.058 118.701 82.0568 104.702 82.0568 87.4333C82.0568 70.1649 68.058 56.166 50.7895 56.166C33.5211 56.166 19.5222 70.1649 19.5222 87.4333C19.5222 104.702 33.5211 118.701 50.7895 118.701Z" fill="white" stroke="#2E353A" strokeLinecap="round" strokeLinejoin="round" />
           <path d="M50.7894 115.594C66.3425 115.594 78.9508 102.986 78.9508 87.4329C78.9508 71.8798 66.3425 59.2715 50.7894 59.2715C35.2363 59.2715 22.6281 71.8798 22.6281 87.4329C22.6281 102.986 35.2363 115.594 50.7894 115.594Z" fill="#2E353A" stroke="#2E353A" strokeLinecap="round" strokeLinejoin="round" />
@@ -285,12 +285,12 @@ const Footer = () => {
           />
         </svg>
         <p className="font-bold text-white tracking-wide uppercase text-2xl ">contact</p>
-        <div className="w-full flex justify-between items-center">
-          <div className="flex gap-x-4 text-lg items-center justify-between">
+        <div className="w-full flex  justify-between items-center">
+          <div className="flex gap-x-4 lg:flex-row flex-col gap-y-4 text-lg lg:items-center justify-between">
             <GrMail className="text-3xl" />
             brahimi.mehdi37@gmail.com
 
-          <div className="flex relative left-20  items-center gap-x-12 justify-between">
+          <div className="flex relative lg:left-20  items-center gap-x-12 justify-between">
             <a href="https://github.com/BrahimiMehdi" target="_blank" rel="noopener noreferrer" className="flex transition-all duration-300 ease-out hover:mr-0 -mr-20 group font-medium items-center gap-x-4">
               <AiFillGithub className="text-3xl" />
               <p className="opacity-0 group-hover:opacity-100 relative -left-4 group-hover:left-0 transition-all duration-200 ease-out">BrahimiMehdi</p>
@@ -311,8 +311,8 @@ const Footer = () => {
       </div>
       </div>
 
-      <div className="col-span-2 relative h-full w-full">
-        <div className={`w-[2.5px] h-0 z-40 footerScroll transition-all duration-300 ease-out left-0 top-0   bg-yellow  absolute`}></div>
+      <div className="md:col-span-2 relative h-full w-full">
+        <div className={`w-[1px] md:block hidden h-0 z-40 footerScroll transition-all duration-300 ease-out left-0 top-0   bg-yellow  absolute`}></div>
         <div className="h-full w-full p-8 flex gap-y-3 flex-col">
           <svg className="w-12 relative -left-1" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -321,7 +321,7 @@ const Footer = () => {
             />
           </svg>
           <p className="text-xl leading-8">
-            2022 Brahimi Mehdi. <br /> All rights reserved
+            2022 Brahimi Mehdi. <br className="sm:block hidden" /> All rights reserved
           </p>
         </div>
       </div>

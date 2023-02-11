@@ -5,7 +5,7 @@ const hind_Guntur = Hind_Guntur({
 });
 const About = () => {
   return (
-    <section name="/about" className="w-full relative grid grid-cols-1 grid-rows-2 md:grid-cols-9 ">
+    <section name="/about" className="w-full relative grid md:grid-rows-1 grid-cols-1 grid-rows-2 md:grid-cols-9 ">
       <div data-scrolli="1" className="w-full scrollInfo opacity-0 relative h-full p-8  md:col-span-4 flex flex-col gap-y-8">
         <p className="font-bold text-white tracking-wide uppercase text-5xl ">about me</p>
         <p className={`${hind_Guntur.className} text-gray-50 text-justify leading-normal text-2xl md:mr-24 tracking-wider font-light`}>

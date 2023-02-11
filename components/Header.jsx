@@ -25,27 +25,27 @@ const Header = () => {
       </div>
       <button className="w-full sm:block hidden h-full relative ">
         <div data-line="3" className="w-[1px] bg-yellow sideLine h-0 absolute left-0"></div>
-        <LinkS offset={-112} spy={true} smooth={true} activeClass="text-yellow" data-info="2" to="/" className="h-full transition-all  duration-300 ease-out hover:scale-90 text-sm tracking-widest opacity-0 w-full  font-semibold innerInfo cursor-pointer uppercase grid place-items-center">home</LinkS>
+        <LinkS offset={-112} spy={true} smooth={true} activeClass="text-yellow" data-info="2" to="/" className="h-full transition-all  duration-300 ease-out hover:scale-90 text-xs sm:text-sm tracking-widest opacity-0 w-full  font-semibold innerInfo cursor-pointer uppercase grid place-items-center">home</LinkS>
       </button>
       <button className="w-full sm:block hidden h-full relative ">
         <div data-line="4" className="w-[1px] bg-yellow sideLine h-0 absolute left-0"></div>
-        <LinkS spy={true} offset={-112} smooth={true} activeClass="text-yellow" data-info="3" to="/about" className="h-full transition-all  duration-300 ease-out hover:scale-90 text-sm tracking-widest opacity-0 w-full  font-semibold cursor-pointer innerInfo uppercase grid place-items-center">about</LinkS>
+        <LinkS spy={true} offset={-112} smooth={true} activeClass="text-yellow" data-info="3" to="/about" className="h-full transition-all  duration-300 ease-out hover:scale-90 text-xs sm:text-sm tracking-widest opacity-0 w-full  font-semibold cursor-pointer innerInfo uppercase grid place-items-center">about</LinkS>
       </button>
       <button className="w-full h-full relative ">
         <div data-line="5" className="w-[1px] bg-yellow sideLine h-0 absolute left-0"></div>
-        <LinkS offset={-112} spy={true} smooth={true} activeClass="text-yellow"  data-info="6" to="/services" className="h-full transition-all  duration-300 ease-out hover:scale-90 text-sm tracking-widest opacity-0 w-full  font-semibold cursor-pointer innerInfo uppercase grid place-items-center">
+        <LinkS offset={-112} spy={true} smooth={true} activeClass="text-yellow"  data-info="6" to="/services" className="h-full transition-all  duration-300 ease-out hover:scale-90 text-xs sm:text-sm tracking-widest opacity-0 w-full  font-semibold cursor-pointer innerInfo uppercase grid place-items-center">
             services
         </LinkS>
       </button>
       <button className="w-full h-full relative ">
         <div data-line="6" className="w-[1px] bg-yellow sideLine h-0 absolute left-0"></div>
-        <LinkS offset={-112} spy={true} smooth={true} activeClass="text-yellow" data-info="5" to="/work" className="h-full transition-all  duration-300 ease-out hover:scale-90 text-sm tracking-widest opacity-0 w-full  font-semibold cursor-pointer innerInfo uppercase grid place-items-center">work</LinkS>
+        <LinkS offset={-112} spy={true} smooth={true} activeClass="text-yellow" data-info="5" to="/work" className="h-full transition-all  duration-300 ease-out hover:scale-90 text-xs sm:text-sm tracking-widest opacity-0 w-full  font-semibold cursor-pointer innerInfo uppercase grid place-items-center">work</LinkS>
       </button>
       
       
       <button className="w-full h-full relative ">
         <div data-line="7" className="w-[1px] bg-yellow sideLine h-0 absolute left-0"></div>
-        <LinkS offset={-112} spy={true} smooth={true} activeClass="text-yellow"  data-info="6" to="/contact" className="h-full transition-all  duration-300 ease-out hover:scale-90 text-sm tracking-widest opacity-0 w-full  font-semibold cursor-pointer innerInfo uppercase grid place-items-center">
+        <LinkS offset={-112} spy={true} smooth={true} activeClass="text-yellow"  data-info="6" to="/contact" className="h-full transition-all  duration-300 ease-out hover:scale-90 text-xs sm:text-sm tracking-widest opacity-0 w-full  font-semibold cursor-pointer innerInfo uppercase grid place-items-center">
             contact
         </LinkS>
       </button>

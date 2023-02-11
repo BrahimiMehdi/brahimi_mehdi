@@ -20,7 +20,14 @@ html,body{
   display: flex;
   flex: 1;
 }
-
+.test{
+  -webkit-text-stroke-width: 3.5px;
+  -webkit-text-stroke-color: white;
+}
+.testSmall{
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: white;
+}
 .slide {
   position: absolute;
   font-size: 90px;

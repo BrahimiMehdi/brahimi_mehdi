@@ -123,7 +123,7 @@ const Services = () => {
         ref={imageCont}
         className="absolute grid  z-[6] place-items-center  scale-125 bg-cover bg-center bg-[url('/bg.jpg')] top-0 left-0 h-full w-full [clip-path:_polygon(40%_40%,_60%_40%,_60%_60%,_40%_60%);] "
       >
-          <p className="md:text-7xl text-6xl lg:text-9xl   text-white relative select-text font-bold uppercase">services</p>
+          <p className="md:text-7xl text-5xl sm:text-6xl lg:text-9xl md:scale-125 tracking-widest testSmall md:test text-transparent relative select-text font-bold uppercase">services</p>
       </div>
       <div
         data-scrollv="20"
@@ -146,7 +146,7 @@ const Services = () => {
               className={`${card.image} md:py-16 py-6 px-12  flex flex-col items-center relative  bg-cover  w-full overflow-hidden group   bg-center card intersectImage h-full  `}
             >
               <p
-                className={`2xl:text-6xl text-center md:text-left text-2xl md:text-4xl  transition-all duration-500 ease-in-out ${
+                className={`2xl:text-6xl text-center md:text-left text-2xl md:text-4xl  transition-all duration-1000 ease-in-out ${
                   card.title === current
                     ? "text-dark-blue -translate-y-4"
                     : " text-white"
@@ -161,10 +161,10 @@ const Services = () => {
                   card.title === current
                     ? "[clip-path:_polygon(0_0,_100%_0,_100%_100%,_0%_100%);]"
                     : " [clip-path:_polygon(0_0,_0_0,_0_100%,_0%_100%);] "
-                } transition-all duration-500 ease-in-out z-[2] w-full bg-stone-100 `}
+                } transition-all duration-1000 ease-in-out z-[2] w-full bg-stone-100 `}
               >
                 <p
-                  className={`2xl:text-3xl md:text-xl sm:text-base text-xs absolute top-[60%] md:text-left text-justify md:top-[50%] whitespace-normal leading-normal -translate-y-[50%] px-4 text-left transition-all duration-500 ease-in-out md:leading-10 tracking-wide text-dark-blue ${
+                  className={`2xl:text-3xl md:text-xl sm:text-base text-xs absolute top-[60%] md:text-left  md:top-[50%] whitespace-normal leading-normal -translate-y-[50%] px-4 text-left transition-all duration-1000 ease-in-out md:leading-10 tracking-wide text-dark-blue ${
                     card.title === current ? " opacity-100" : "opacity-0"
                   }`}
                 >

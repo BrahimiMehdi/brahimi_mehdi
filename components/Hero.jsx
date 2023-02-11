@@ -26,11 +26,11 @@ const Hero = () => {
         </h1>
         <p className={` text-2xl sm:text-left text-justify lg:mr-24 tracking-wider font-light`}>Build your ideas in the real world using the latest technologies.</p>
         <div className="w-full  gap-12 sm:flex-row flex-col flex items-center">
-          <button className={` flex-grow intersect font-medium w-full sm:w-72 grid place-items-center relative transition-all group duration-300 ease-out hover:bg-blue    uppercase tracking-widest  h-16 border-2 border-gray-100 bg-orange `}>
+          <button className={` flex-grow max-w-sm intersect font-medium w-full sm:w-72 grid place-items-center relative transition-all group duration-300 ease-out hover:bg-blue    uppercase tracking-widest  h-16 border-2 border-gray-100 bg-orange `}>
             <span className=" absolute transition-all duration-300 ease-in-out text-white">start now</span>
           </button>
-          <button className="w-full sm:w-fit">
-          <LinkS offset={-112} spy={true} smooth={true}  to="/about" className={`lg:w-60  sm:w-48 sm:flex-shrink intersect cursor-pointer uppercase border-white transition-all duration-300 ease-out group flex items-center justify-center tracking-widest  h-16 border-2   `}>
+          <button className="w-full lg:w-60   max-w-sm sm:w-48 sm:flex-shrink">
+          <LinkS offset={-112} spy={true} smooth={true}  to="/about" className={`lg:w-60   max-w-sm sm:w-48 sm:flex-shrink intersect cursor-pointer uppercase border-white transition-all duration-300 ease-out group flex items-center justify-center tracking-widest  h-16 border-2   `}>
             Learn more
             <IoIosArrowDown className=" text-white intersect relative bottom-[1px] transition-all duration-300 ease-out left-3 text-xl group-hover:opacity-100 opacity-0" />
           </LinkS>

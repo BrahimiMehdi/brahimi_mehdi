@@ -37,13 +37,13 @@ const Contact = () => {
     <section
     name="/contact"
       ref={trigger}
-      className="h-[calc(100vh-7rem)] relative w-full grid grid-cols-9 items-center "
+      className="md:h-[calc(100vh-7rem)] relative w-full grid grid-cols-1 grid-rows-2 md:grid-rows-1 md:grid-cols-9 items-center "
     >
       <div
         data-scrollh="30"
         className={`h-[1px] bg-yellow transition-all duration-300 ease-out   z-40 scrollLineH w-0 absolute top-0`}
       ></div>
-      <div className="col-span-4 h-full w-full relative">
+      <div className="col-span-4 order-2 md:order-1 h-full w-full relative">
         <Image
           src={"/contact.jpg"}
           fill
@@ -56,12 +56,12 @@ const Contact = () => {
         ></div>
       </div>
 
-      <div className="flex h-full px-16 w-full relative  flex-col col-span-5 gap-y-16 uppercase pt-20 font-bold text-white">
+      <div className="flex h-full order-1 md:order-2 px-8 md:px-16 w-full relative md:items-start items-center  flex-col col-span-5 gap-y-16 uppercase pt-20 font-bold text-white">
         <div
           data-scrollv="44"
           className={`w-[1px] h-0 z-40 scrollLine  transition-all duration-300 ease-out   left-0 top-0   bg-yellow  absolute `}
         ></div>
-        <p ref={first} className="firstText  text-7xl">
+        <p ref={first} className="firstText text-4xl md:text-left text-center lg:text-7xl">
           <span className="child inline-block">c</span>
           <span className="child inline-block">o</span>
           <span className="child inline-block">n</span>
@@ -69,13 +69,12 @@ const Contact = () => {
           <span className="child inline-block">a</span>
           <span className="child inline-block">c</span>
           <span className="child inline-block">t</span>
-          <span className="child inline-block mr-8"> </span>
-          <span className="child inline-block"> </span>
+          <span className="child inline-block mr-4 md:mr-8"> </span>
           <span className="child inline-block">m</span>
           <span className="child inline-block">e</span>
         </p>
-        <form className="w-full h-full font-medium pb-16" action="">
-          <div className="grid grid-cols-2 gap-8 grid-rows-4 justify-between  w-full max-w-xl  h-full">
+        <form className="w-full h-full md:min-h-fit min-h-[30rem] font-medium pb-16" action="">
+          <div className="grid md:grid-cols-2 place-items-center md:place-items-start gap-12 md:gap-8 grid-rows-5 md:grid-rows-4  w-full max-w-xl  h-full">
             <div className="w-full relative h-12 group transition-all duration-200 ease-out focus-within:bg-gray-50 outline-light-blue outline focus-within:outline-yellow bg-white rounded-sm flex items-center">
               <div className="w-16 transition-all duration-200 ease-out h-full group-focus-within:border-r-yellow border-r-2 border-r-gray-300 grid place-items-center ">
                 <BsPerson className="text-2xl text-dark-blue" />
@@ -119,7 +118,7 @@ const Contact = () => {
                 id=""
               />
             </div>
-            <div className="w-full col-span-2 relative h-12 group transition-all duration-200 ease-out focus-within:bg-gray-50 outline-light-blue outline focus-within:outline-yellow bg-white rounded-sm flex items-center">
+            <div className="w-full md:col-span-2 relative h-12 group transition-all duration-200 ease-out focus-within:bg-gray-50 outline-light-blue outline focus-within:outline-yellow bg-white rounded-sm flex items-center">
               <div className="w-16 transition-all duration-200 ease-out h-full group-focus-within:border-r-yellow border-r-2 border-r-gray-300 grid place-items-center ">
                 <AiOutlineMail className="text-2xl text-dark-blue" />
               </div>
@@ -140,7 +139,7 @@ const Contact = () => {
                 id=""
               />
             </div>
-            <div className="w-full col-span-2 row-span-2 relative h-full group transition-all duration-200 ease-out focus-within:bg-gray-50 outline-light-blue outline focus-within:outline-yellow bg-white rounded-sm flex items-center">
+            <div className="w-full md:col-span-2 row-span-3 md:row-span-2 relative h-full group transition-all duration-200 ease-out focus-within:bg-gray-50 outline-light-blue outline focus-within:outline-yellow bg-white rounded-sm flex items-center">
               <label
                 htmlFor="message"
                 className="absolute text-sm left-0 transition-all ease-in-out duration-300 group-focus-within:-translate-y-1 group-focus-within:text-yellow -top-6 font-medium text-white"
@@ -151,7 +150,7 @@ const Contact = () => {
               <textarea
                 required
                 {...register("message", { required: true })}
-                className="h-full w-full p-3 focus:outline-none  "
+                className="h-full resize-none w-full p-3 focus:outline-none  "
                 placeholder="Message"
                 type="message"
                 name="message"
