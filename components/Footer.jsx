@@ -11,7 +11,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer ref={footerCont} name="/contact" className="w-full overflow-hidden text-white  relative   snap-center    grid grid-cols-9">
+    <footer ref={footerCont}  className="w-full overflow-hidden text-white  relative   snap-center    grid grid-cols-9">
       <div className={`h-[2px] bg-yellow z-40  transition-all duration-300 ease-out footerScrollH w-0 absolute top-0`}></div>
       <div className={`w-[2.5px] h-0 z-40 footerScroll transition-all duration-300 ease-out left-0 top-0   bg-yellow  absolute`}></div>
 

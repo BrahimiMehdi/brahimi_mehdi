@@ -115,13 +115,15 @@ const Services = () => {
   return (
     <div
       ref={container}
+    name="/services"
+
       className=" overflow-hidden    relative h-screen w-full  flex flex-row"
     >
       <div
         ref={imageCont}
         className="absolute grid  z-[6] place-items-center  scale-125 bg-cover bg-center bg-[url('/bg.jpg')] top-0 left-0 h-full w-full [clip-path:_polygon(40%_40%,_60%_40%,_60%_60%,_40%_60%);] "
       >
-          <p className=" text-9xl   text-white relative select-text font-bold uppercase">services</p>
+          <p className="md:text-7xl text-6xl lg:text-9xl   text-white relative select-text font-bold uppercase">services</p>
       </div>
       <div
         data-scrollv="20"
@@ -135,16 +137,16 @@ const Services = () => {
         <section className="w-screen relative z-[3]  snap-mandatory pb-16 bg-cover bg-center  gap-y-12 h-full flex items-center flex-col px-8 pt-64 serviceSection "></section>
         <section
           ref={cardsContainer}
-          className="w-[200vw]  relative z-[7] snap-mandatory grid grid-cols-6 pt-28  h-full  serviceSection "
+          className="w-[200vw]  relative z-[7] snap-mandatory grid grid-cols-3 grid-rows-2 md:grid-rows-1 md:grid-cols-6 pt-28  h-full  serviceSection "
         >
           {cards.map((card, index) => (
             <div
               onClick={() => handleClick(card.title)}
               key={index}
-              className={`${card.image} py-16 px-12  flex flex-col items-center relative  bg-cover  w-full overflow-hidden group   bg-center card intersectImage h-full  `}
+              className={`${card.image} md:py-16 py-6 px-12  flex flex-col items-center relative  bg-cover  w-full overflow-hidden group   bg-center card intersectImage h-full  `}
             >
               <p
-                className={`text-6xl  transition-all duration-500 ease-in-out ${
+                className={`2xl:text-6xl text-center md:text-left text-2xl md:text-4xl  transition-all duration-500 ease-in-out ${
                   card.title === current
                     ? "text-dark-blue -translate-y-4"
                     : " text-white"
@@ -162,7 +164,7 @@ const Services = () => {
                 } transition-all duration-500 ease-in-out z-[2] w-full bg-stone-100 `}
               >
                 <p
-                  className={`text-3xl absolute top-[50%] -translate-y-[50%] px-4 text-left transition-all duration-500 ease-in-out leading-10 tracking-wide text-dark-blue ${
+                  className={`2xl:text-3xl md:text-xl sm:text-base text-xs absolute top-[60%] md:text-left text-justify md:top-[50%] whitespace-normal leading-normal -translate-y-[50%] px-4 text-left transition-all duration-500 ease-in-out md:leading-10 tracking-wide text-dark-blue ${
                     card.title === current ? " opacity-100" : "opacity-0"
                   }`}
                 >
