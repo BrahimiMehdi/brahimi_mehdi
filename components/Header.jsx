@@ -16,8 +16,11 @@ const Header = () => {
         <div data-line="1" className="w-[1px] sideLine bg-yellow h-0 absolute left-0"></div>
         <div data-line="2" className="w-[1px] sideLine bg-yellow h-0 absolute left-0"></div>
         <div data-info="1" className="w-full innerInfo opacity-0 h-full py-4 md:px-12 flex items-center justify-center md:justify-between">
-            <Image alt="picture contains my face" priority width={400} height={400} className="w-20 border-4 border-opacity-80 border-orange h-20 rounded-full object-center object-cover md:block hidden" src={"/pfp.jpeg"} />
-            <p className="text-xl md:block hidden font-bold uppercase tracking-widest">brahimi mehdi</p>
+          <Link className="md:block hidden" href={"/"}>
+          <Image alt="picture contains my face" priority width={400} height={400} className="w-20 border-4 border-opacity-80 border-orange bg-stone-800 h-20 rounded-full object-center object-cover " src={"/pic.png"} />
+
+          </Link>
+            <Link href={"/"} className="text-xl md:block hidden font-bold uppercase tracking-widest">brahimi mehdi</Link>
             <Link href={"/"}>
                 <AiFillHome className="text-3xl text-white" />
             </Link>

@@ -1,15 +1,11 @@
 import Head from "next/head";
 import {
   Header,
-  Hero,
-  Services,
   Contact,
-  About,
-  Work,
   Footer,
 } from "../components";
 
-export default function Home() {
+export default function contact() {
   return (
     <div className="">
       <Head>
@@ -24,10 +20,6 @@ export default function Home() {
       <main className="min-h-screen overflow-x-hidden   bg-dark-blue ">
         <Header />
         <div className="h-28 bg-dark-blue"></div>
-        <Hero />
-        <About />
-        <Services />
-        <Work />
         <Contact />
         <Footer />
       </main>
@@ -40,13 +32,14 @@ export default function Home() {
     </div>
   );
 }
-export async function getServerSideProps(context:any) {
-  await waitload(1.5);
-  return {
-    props: { dummy: "dummy" }, // will be passed to the page component as props
-  };
-}
 
-function waitload(sec:number) {
-  return new Promise((resolve) => setTimeout(resolve, sec * 1000));
-}
+export async function getServerSideProps(context:any) {
+    await waitload(1.5);
+    return {
+      props: { dummy: "dummy" }, // will be passed to the page component as props
+    };
+  }
+  
+  function waitload(sec:number) {
+    return new Promise((resolve) => setTimeout(resolve, sec * 1000));
+  }

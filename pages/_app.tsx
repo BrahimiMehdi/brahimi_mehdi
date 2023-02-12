@@ -1,11 +1,6 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
-import { Montserrat } from "@next/font/google";
-const montserrat = Montserrat({
-  subsets: ["latin-ext"],
-  variable: "--font-mont",
-});
-import Lenis from '@studio-freight/lenis'
+import { Loader } from "../components";
 import { gsap, Power3 } from "gsap";
 import { useEffect } from "react";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -14,23 +9,7 @@ export default function App({ Component, pageProps }: AppProps) {
   const tl = gsap.timeline();
   const router = useRouter();
   gsap.registerPlugin(ScrollTrigger);
-  useEffect(() => {
-    const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
-      gestureDirection: 'vertical', // vertical, horizontal, both
-      smooth: true,
-      mouseMultiplier: 1,
-      smoothTouch: false,
-      touchMultiplier: 2,
-      // infinite: false,
-    })
-    const raf =(time:any)=>{
-      lenis.raf(time);
-      requestAnimationFrame(raf)
-    }
-    requestAnimationFrame(raf)
-  }, [])
+
   
   useEffect(() => {
     
@@ -142,8 +121,11 @@ export default function App({ Component, pageProps }: AppProps) {
     }
   }, [router.asPath]);
   return (
-    <div className={`${montserrat.className} antialiased  selection:bg-orange selection:bg-opacity-60 font-Montserrat `}>
+    <Loader>
+      <div className={` antialiased font-Montserrat  selection:bg-orange selection:bg-opacity-60  `}>
       <Component {...pageProps} />
     </div>
+    </Loader>
+    
   );
 }
