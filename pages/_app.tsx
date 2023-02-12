@@ -38,7 +38,35 @@ export default function App({ Component, pageProps }: AppProps) {
     const context =gsap.context(()=>{
       tl.to("#topers", { width: "100%", duration: 5, ease: Power3.easeOut });
     gsap.set(".ball", { xPercent: -50, yPercent: -50 });
+    let mm = gsap.matchMedia();
 
+    // add a media query. When it matches, the associated function will run
+    mm.add("(min-width: 800px)", () => {
+
+      gsap.utils.toArray(".scrollLine").forEach((line: any) => {
+        let number = line.getAttribute("data-scrollv");
+        gsap.to(`.scrollLine[data-scrollv="${number}"]`, {
+          height: "100%",
+          scrollTrigger: {
+            trigger: `.scrollLine[data-scrollv='${number}']`,
+            scrub: 1,
+            start: "center bottom",
+          },
+        });
+      });
+      gsap.utils.toArray(".scrollLineH").forEach((line: any) => {
+        let number = line.getAttribute("data-scrollh");
+        gsap.to(`.scrollLineH[data-scrollh="${number}"]`, {
+          width: "100%",
+          scrollTrigger: {
+            trigger: `.scrollLineH[data-scrollh='${number}']`,
+            scrub: 1,
+            start: "top bottom",
+          },
+        });
+      });
+      
+    });
     const ball = document.querySelector(".ball");
     const intersectors = document.querySelectorAll(".intersect")
     const images = document.querySelectorAll(".intersectImage")
@@ -95,28 +123,7 @@ export default function App({ Component, pageProps }: AppProps) {
         ease: Power3.easeOut,
       });
     });
-    gsap.utils.toArray(".scrollLine").forEach((line: any) => {
-      let number = line.getAttribute("data-scrollv");
-      gsap.to(`.scrollLine[data-scrollv="${number}"]`, {
-        height: "100%",
-        scrollTrigger: {
-          trigger: `.scrollLine[data-scrollv='${number}']`,
-          scrub: 1,
-          start: "center bottom",
-        },
-      });
-    });
-    gsap.utils.toArray(".scrollLineH").forEach((line: any) => {
-      let number = line.getAttribute("data-scrollh");
-      gsap.to(`.scrollLineH[data-scrollh="${number}"]`, {
-        width: "100%",
-        scrollTrigger: {
-          trigger: `.scrollLineH[data-scrollh='${number}']`,
-          scrub: 1,
-          start: "top bottom",
-        },
-      });
-    });
+   
     gsap.utils.toArray(".scrollInfo").forEach((line: any) => {
       let number = line.getAttribute("data-scrolli");
       gsap.to(`.scrollInfo[data-scrolli="${number}"]`, {

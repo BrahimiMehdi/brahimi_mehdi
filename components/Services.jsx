@@ -121,7 +121,7 @@ const Services = () => {
     >
       <div
         ref={imageCont}
-        className="absolute grid  z-[6] place-items-center  scale-125 bg-cover bg-center bg-[url('/bg.jpg')] top-0 left-0 h-full w-full [clip-path:_polygon(40%_40%,_60%_40%,_60%_60%,_40%_60%);] "
+        className="absolute grid will-change-[clip-path]  z-[6] place-items-center  scale-125 bg-cover bg-center bg-[url('/bg.jpg')] top-0 left-0 h-full w-full [clip-path:_polygon(40%_40%,_60%_40%,_60%_60%,_40%_60%);] "
       >
           <p className="md:text-7xl text-5xl sm:text-6xl lg:text-9xl md:scale-125 tracking-widest testSmall md:test text-transparent relative select-text font-bold uppercase">services</p>
       </div>
@@ -132,18 +132,18 @@ const Services = () => {
 
       <div
         ref={scrollContainer}
-        className="w-[300vw] mainContaine   snap-center snap-always snap-mandatory snap-x   h-full  flex "
+        className="w-[300vw] will-change-contents  snap-center snap-always snap-mandatory snap-x   h-full  flex "
       >
         <section className="w-screen relative z-[3]  snap-mandatory pb-16 bg-cover bg-center  gap-y-12 h-full flex items-center flex-col px-8 pt-64 serviceSection "></section>
         <section
           ref={cardsContainer}
-          className="w-[200vw]  relative z-[7] snap-mandatory grid grid-cols-3 grid-rows-2 md:grid-rows-1 md:grid-cols-6 pt-28  h-full  serviceSection "
+          className="w-[200vw]  will-change-contents  relative z-[7] snap-mandatory grid grid-cols-3 grid-rows-2 md:grid-rows-1 md:grid-cols-6 pt-28  h-full  serviceSection "
         >
           {cards.map((card, index) => (
             <div
               onClick={() => handleClick(card.title)}
               key={index}
-              className={`${card.image} md:py-16 py-6 px-12  flex flex-col items-center relative  bg-cover  w-full overflow-hidden group   bg-center card intersectImage h-full  `}
+              className={`${card.image} will-change-contents md:py-16 py-6 px-12  flex flex-col items-center relative  bg-cover  w-full overflow-hidden group   bg-center card intersectImage h-full  `}
             >
               <p
                 className={`2xl:text-6xl text-center md:text-left text-2xl md:text-4xl  transition-all duration-1000 ease-in-out ${
