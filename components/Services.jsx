@@ -61,11 +61,12 @@ const Services = () => {
   const imageCont = useRef();
   const cardsContainer = useRef();
   const [current, setCurrent] = useState("");
+  const mm = gsap.matchMedia();
+
   const handleClick =(input)=>{
     setCurrent((old)=> old !==input ? input :"")
   }
   useEffect(() => {
-    const mm = gsap.matchMedia()
     let ctx = gsap.context(() => {
       const cards = gsap.utils.toArray(".card");
       const sections = gsap.utils.toArray(".serviceSection");
@@ -85,6 +86,8 @@ const Services = () => {
           end: "+=2000",
         },
       });
+    mm.add("(min-width: 800px)", () => {
+
       cards.forEach((card) => {
         gsap.to(card, {
           scale: 1,
@@ -99,7 +102,7 @@ const Services = () => {
             // end:"-=0"
           },
         });
-      });
+      });})
 
       gsap.to(imageCont.current, {
         clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",

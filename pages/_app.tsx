@@ -44,46 +44,47 @@ export default function App({ Component, pageProps }: AppProps) {
           },
         });
       });
+      const ball = document.querySelector(".ball");
+      const intersectors = document.querySelectorAll(".intersect")
+      const images = document.querySelectorAll(".intersectImage")
+      const pos = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
+      const mouse = { x: pos.x, y: pos.y };
+      const speed = 0.15;
+  
+      const xSet = gsap.quickSetter(ball, "x", "px");
+      const ySet = gsap.quickSetter(ball, "y", "px");
+  
+      window.addEventListener("mousemove", (e) => {
+        mouse.x = e.x;
+        mouse.y = e.y;
+      });
+      intersectors.forEach((item)=>{
+        item.addEventListener("mouseenter",(e)=>{
+            gsap.to(".ball",{width:"50px",height:"50px",scale:2,duration:0.2})
+        })
+        item.addEventListener("mouseleave",(e)=>{
+            gsap.to(".ball",{width:"16px",height:"16px",scale:1,duration:0.2})
+        })
+      })
+      images.forEach((item)=>{
+        item.addEventListener("mouseenter",(e)=>{
+            gsap.to(".ball",{width:"50px",height:"50px",color:"white",borderColor:"rgb(236 252 203)",background:"transparent",scale:2,duration:0.2})
+        })
+        item.addEventListener("mouseleave",(e)=>{
+            gsap.to(".ball",{width:"16px",height:"16px",color:"transparent",background:"rgb(236 252 203)",scale:1,duration:0.2})
+        })
+      })
+      gsap.ticker.add(() => {
+        // adjust speed for higher refresh monitors
+        const dt = 1.0 - Math.pow(1.0 - speed, gsap.ticker.deltaRatio());
+        pos.x += (mouse.x - pos.x) * dt;
+        pos.y += (mouse.y - pos.y) * dt;
+        xSet(pos.x);
+        ySet(pos.y);
+      });
       
     });
-    const ball = document.querySelector(".ball");
-    const intersectors = document.querySelectorAll(".intersect")
-    const images = document.querySelectorAll(".intersectImage")
-    const pos = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
-    const mouse = { x: pos.x, y: pos.y };
-    const speed = 0.15;
 
-    const xSet = gsap.quickSetter(ball, "x", "px");
-    const ySet = gsap.quickSetter(ball, "y", "px");
-
-    window.addEventListener("mousemove", (e) => {
-      mouse.x = e.x;
-      mouse.y = e.y;
-    });
-    intersectors.forEach((item)=>{
-      item.addEventListener("mouseenter",(e)=>{
-          gsap.to(".ball",{width:"50px",height:"50px",scale:2,duration:0.2})
-      })
-      item.addEventListener("mouseleave",(e)=>{
-          gsap.to(".ball",{width:"16px",height:"16px",scale:1,duration:0.2})
-      })
-    })
-    images.forEach((item)=>{
-      item.addEventListener("mouseenter",(e)=>{
-          gsap.to(".ball",{width:"50px",height:"50px",color:"white",borderColor:"rgb(236 252 203)",background:"transparent",scale:2,duration:0.2})
-      })
-      item.addEventListener("mouseleave",(e)=>{
-          gsap.to(".ball",{width:"16px",height:"16px",color:"transparent",background:"rgb(236 252 203)",scale:1,duration:0.2})
-      })
-    })
-    gsap.ticker.add(() => {
-      // adjust speed for higher refresh monitors
-      const dt = 1.0 - Math.pow(1.0 - speed, gsap.ticker.deltaRatio());
-      pos.x += (mouse.x - pos.x) * dt;
-      pos.y += (mouse.y - pos.y) * dt;
-      xSet(pos.x);
-      ySet(pos.y);
-    });
     gsap.utils.toArray(".sideLine").forEach((line: any) => {
       let number = line.getAttribute("data-line");
       gsap.to(`.sideLine[data-line="${number}"]`, {
