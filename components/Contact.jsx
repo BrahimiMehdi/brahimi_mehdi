@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { useRouter } from "next/router";
 import { gsap, Power3, Elastic } from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import Image from "next/image";
@@ -6,6 +7,7 @@ import { useForm } from "react-hook-form";
 import { BsPerson, BsCalendar2Date, BsTelephone } from "react-icons/bs";
 import { AiOutlineMail } from "react-icons/ai";
 const Contact = () => {
+  const router = useRouter()
   const {
     register,
     handleSubmit,
@@ -32,7 +34,9 @@ const Contact = () => {
       ctx.revert();
     };
   }, []);
-
+  const onSubmit = (data) => {
+    addReply({ ...data, action: "addContact", state: "new",page:router.asPath});
+  };
   return (
     <section
     name="/contact"
@@ -73,7 +77,7 @@ const Contact = () => {
           <span className="child inline-block">m</span>
           <span className="child inline-block">e</span>
         </p>
-        <form className="w-full h-full md:min-h-fit min-h-[30rem] font-medium pb-16" action="">
+        <form onSubmit={handleSubmit(onSubmit)} className="w-full h-full md:min-h-fit min-h-[30rem] font-medium pb-16" >
           <div className="grid md:grid-cols-2 place-items-center md:place-items-start gap-12 md:gap-8 grid-rows-5 md:grid-rows-4  w-full max-w-xl  h-full">
             <div className="w-full relative h-12 group transition-all duration-200 ease-out focus-within:bg-gray-50 outline-light-blue outline focus-within:outline-yellow bg-white rounded-sm flex items-center">
               <div className="w-16 transition-all duration-200 ease-out h-full group-focus-within:border-r-yellow border-r-2 border-r-gray-300 grid place-items-center ">
