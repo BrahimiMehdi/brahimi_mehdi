@@ -27,7 +27,7 @@ const Hero = () => {
         </h1>
         <p className={` text-2xl sm:text-3xl sm:text-left text-justify lg:mr-24 tracking-wider font-light`}>Build your ideas in the real world using the latest technologies.</p>
         <div className="w-full  gap-12 sm:flex-row flex-col flex items-center">
-          <LinkS offset={-112} spy={true} smooth={true}  to="/about" className={` flex-grow cursor-pointer group max-w-sm flex  intersect font-medium w-full px-20 sm:w-72 items-center justify-around relative transition-all group duration-300 ease-out hover:bg-blue    uppercase tracking-widest  h-16 border-2 border-gray-100 bg-orange `}>
+          <LinkS offset={-112} spy={true} smooth={true}  to="/about" className={` flex-grow cursor-pointer group sm:max-w-xs max-w-sm flex  intersect font-medium w-full px-20 sm:w-72 items-center justify-around relative transition-all group duration-300 ease-out hover:bg-blue    uppercase tracking-widest  h-16 border-2 border-gray-100 bg-orange `}>
             <span className="  transition-all duration-300 pointer-events-none ease-in-out text-white">learn more</span>
             <IoIosArrowDown className=" text-white intersect pointer-events-none relative bottom-[1px] transition-all duration-300 ease-out left-3 text-xl group-hover:opacity-100 opacity-0" />
           </LinkS>
