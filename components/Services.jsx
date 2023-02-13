@@ -18,16 +18,14 @@ import { TfiWrite } from "react-icons/tfi";
 //   duration: 2,
 // });
 
-
 const Services = () => {
   const cards = [
-  
     {
       title: "Full stack Mastery",
       image: "bg-[url('/web.jpg')] ",
       text: "Transform your ideas into reality with my full stack development skills, honed to deliver seamless results.",
     },
-   
+
     {
       title: "UI/UX Design",
       image: "bg-[url('/ui.jpg')] ",
@@ -54,7 +52,7 @@ const Services = () => {
       text: "Engage your audience and elevate your brand with my top-quality, SEO-optimized content creation services, designed to bring your message to life.",
     },
   ];
-  
+
   gsap.registerPlugin(ScrollTrigger);
   const container = useRef();
   const scrollContainer = useRef();
@@ -63,70 +61,88 @@ const Services = () => {
   const [current, setCurrent] = useState("");
   const mm = gsap.matchMedia();
 
-  const handleClick =(input)=>{
-    setCurrent((old)=> old !==input ? input :"")
-  }
+  const handleClick = (input) => {
+    setCurrent((old) => (old !== input ? input : ""));
+  };
   useEffect(() => {
     let ctx = gsap.context(() => {
       const cards = gsap.utils.toArray(".card");
       const sections = gsap.utils.toArray(".serviceSection");
-      const containerAnim = gsap.to(sections, {
-        xPercent: -100 * (sections.length - 1),
-        ease: "none",
-        delay: 0.2,
-        scrollTrigger: {
-          trigger: container.current,
-          scrub: 1,
-          pin: true,
-          // snap: {
-          //   snapTo: 0.5,
-          //   duration: 0.3,
-          //   ease: Power3.easeInOut
-          // },
-          end: "+=2000",
-        },
-      });
-    mm.add("(min-width: 800px)", () => {
-
-      cards.forEach((card) => {
-        gsap.to(card, {
-          scale: 1,
-          backgroundPositionX: "0%",
-          ease: Power3.easeInOut,
-          duration: 2,
+      
+      mm.add("(min-width: 800px)", () => {
+        const containerAnim = gsap.to(sections, {
+          xPercent: -100 * (sections.length - 1),
+          ease: "none",
           scrollTrigger: {
-            trigger: cardsContainer.current,
-            containerAnimation: containerAnim,
+            trigger: container.current,
             scrub: 1,
-            // start:"-=300",
-            // end:"-=0"
+            pin: true,
+            end:"+=2000"            
           },
         });
-      });})
-
-      gsap.to(imageCont.current, {
-        clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-        scale: 1,
-        backgroundPositionY:"55",
-        scrollTrigger: { trigger: container.current, scrub: 1, end: "+=1000" },
+        gsap.to(imageCont.current, {
+          clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+          scale: 1,
+          backgroundPositionY: "55",
+          scrollTrigger: { trigger: container.current, scrub: 1, end: "+=1000" },
+        });
+        cards.forEach((card) => {
+          gsap.to(card, {
+            scale: 1,
+            backgroundPositionX: "0%",
+            ease: Power3.easeInOut,
+            duration: 2,
+            scrollTrigger: {
+              trigger: cardsContainer.current,
+              containerAnimation: containerAnim,
+              scrub: 1,
+              // start:"-=300",
+              // end:"-=0"
+            },
+          });
+        });
       });
+      mm.add("(max-width: 799px)", () => {
+        gsap.to(sections, {
+          xPercent: -100 * (sections.length - 1),
+          ease: "none",
+          scrollTrigger: {
+            trigger: container.current,
+            scrub: 1,
+            pin: true,
+          },
+        });
+        gsap.to(imageCont.current, {
+          clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+          scale: 1,
+          backgroundPositionY: "55",
+          scrollTrigger: { trigger: container.current, scrub: 1, end: "+=1000" },
+        });
+        
+      });
+
+      
     });
 
-    return () => ctx.revert();
+    return () => {
+      ctx.revert()
+      mm.revert()
+    };
   }, []);
 
   return (
     <div
       ref={container}
-    name="/services"
-
+      name="/services"
       className=" overflow-hidden    relative h-screen w-full  flex flex-row"
     >
       <div
         ref={imageCont}
         className="absolute grid will-change-[clip-path]  z-[6] place-items-center  scale-125 bg-cover bg-center bg-[url('/bg.jpg')] top-0 left-0 h-full w-full [clip-path:_polygon(40%_40%,_60%_40%,_60%_60%,_40%_60%);] "
       >
-          <p className="md:text-7xl text-5xl sm:text-6xl xl:text-8xl lg:text-7xl 2xl:text-9xl md:scale-125 tracking-widest testSmall md:test text-transparent relative select-text font-bold uppercase">services</p>
+        <p className="md:text-7xl text-5xl sm:text-6xl xl:text-8xl lg:text-7xl 2xl:text-9xl md:scale-125 tracking-widest testSmall md:test text-transparent relative select-text font-bold uppercase">
+          services
+        </p>
       </div>
       <div
         data-scrollv="20"
