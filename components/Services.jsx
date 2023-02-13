@@ -23,35 +23,35 @@ const Services = () => {
   const cards = [
   
     {
-      title: "Full stack development",
+      title: "Full stack Mastery",
       image: "bg-[url('/web.jpg')] ",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi maxime cumque eveniet a alias aliquid aperiam quo saepe officia. Magni reiciendis nihil quo quibusdam sequi soluta veniam consectetur recusandae nam.",
+      text: "Transform your ideas into reality with my full stack development skills, honed to deliver seamless results.",
     },
    
     {
       title: "UI/UX Design",
       image: "bg-[url('/ui.jpg')] ",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi maxime cumque eveniet a alias aliquid aperiam quo saepe officia. Magni reiciendis nihil quo quibusdam sequi soluta veniam consectetur recusandae nam.",
+      text: "Elevate your online presence with eye-catching and user-friendly UI/UX designs, crafted to enhance the user experience.",
     },
     {
       title: "Ecommerce",
       image: "bg-[url('/ecommerce.jpg')] ",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi maxime cumque eveniet a alias aliquid aperiam quo saepe officia. Magni reiciendis nihil quo quibusdam sequi soluta veniam consectetur recusandae nam.",
+      text: "Drive growth and increase conversions with custom e-commerce solutions, designed to boost your sales.",
     },
     {
-      title: "Website redesign",
+      title: "Website Revamp",
       image: "bg-[url('/ux.jpg')] ",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi maxime cumque eveniet a alias aliquid aperiam quo saepe officia. Magni reiciendis nihil quo quibusdam sequi soluta veniam consectetur recusandae nam.",
+      text: "Give your website a much-needed upgrade with my website redesign services, breathing new life into your online presence.",
     },
     {
       title: "SEO and marketting",
       image: "bg-[url('/seo2.jpg')] ",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi maxime cumque eveniet a alias aliquid aperiam quo saepe officia. Magni reiciendis nihil quo quibusdam sequi soluta veniam consectetur recusandae nam.",
+      text: "Put your brand on the map with my effective SEO and marketing strategies, aimed at increasing your online visibility and attracting more customers.",
     },
     {
-      title: "Content creation",
+      title: "Content Elevation",
       image: "bg-[url('/seo.jpg')] ",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi maxime cumque eveniet a alias aliquid aperiam quo saepe officia. Magni reiciendis nihil quo quibusdam sequi soluta veniam consectetur recusandae nam.",
+      text: "Engage your audience and elevate your brand with my top-quality, SEO-optimized content creation services, designed to bring your message to life.",
     },
   ];
   
@@ -65,6 +65,7 @@ const Services = () => {
     setCurrent((old)=> old !==input ? input :"")
   }
   useEffect(() => {
+    const mm = gsap.matchMedia()
     let ctx = gsap.context(() => {
       const cards = gsap.utils.toArray(".card");
       const sections = gsap.utils.toArray(".serviceSection");
@@ -76,7 +77,6 @@ const Services = () => {
           trigger: container.current,
           scrub: 1,
           pin: true,
-          pinSPacing: false,
           // snap: {
           //   snapTo: 0.5,
           //   duration: 0.3,
@@ -123,7 +123,7 @@ const Services = () => {
         ref={imageCont}
         className="absolute grid will-change-[clip-path]  z-[6] place-items-center  scale-125 bg-cover bg-center bg-[url('/bg.jpg')] top-0 left-0 h-full w-full [clip-path:_polygon(40%_40%,_60%_40%,_60%_60%,_40%_60%);] "
       >
-          <p className="md:text-7xl text-5xl sm:text-6xl lg:text-9xl md:scale-125 tracking-widest testSmall md:test text-transparent relative select-text font-bold uppercase">services</p>
+          <p className="md:text-7xl text-5xl sm:text-6xl xl:text-8xl lg:text-7xl 2xl:text-9xl md:scale-125 tracking-widest testSmall md:test text-transparent relative select-text font-bold uppercase">services</p>
       </div>
       <div
         data-scrollv="20"
