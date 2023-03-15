@@ -31,8 +31,8 @@ const Hero = () => {
             <span className="  transition-all duration-300 pointer-events-none ease-in-out text-white">learn more</span>
             <IoIosArrowDown className=" text-white intersect pointer-events-none relative bottom-[1px] transition-all duration-300 ease-out left-3 text-xl group-hover:opacity-100 opacity-0" />
           </LinkS>
-          <button className="w-full lg:w-60  max-w-sm sm:w-48 sm:flex-shrink">
-          <Link href={"/contact"} className={`lg:w-60   max-w-sm sm:w-48 sm:flex-shrink intersect cursor-pointer uppercase border-white transition-all duration-300 ease-out group flex items-center justify-center tracking-widest  h-16 border-2   `}>
+          <button className="w-full lg:w-60   max-w-sm sm:w-48 sm:flex-shrink">
+          <Link href={"/contact"} className={`lg:w-60 hover:bg-blue   max-w-sm sm:w-48 sm:flex-shrink intersect cursor-pointer uppercase border-white transition-all duration-300 ease-out group flex items-center justify-center tracking-widest  h-16 border-2   `}>
             Start now
           </Link>
           </button>

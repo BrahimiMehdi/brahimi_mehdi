@@ -156,13 +156,13 @@ const Services = () => {
         <section className="w-screen relative z-[3]  snap-mandatory pb-16 bg-cover bg-center  gap-y-12 h-full flex items-center flex-col px-8 pt-64 serviceSection "></section>
         <section
           ref={cardsContainer}
-          className="w-[200vw]  will-change-contents  relative z-[7] snap-mandatory grid grid-cols-3 grid-rows-2 md:grid-rows-1 md:grid-cols-6 pt-28  h-full  serviceSection "
+          className="w-[200vw] bg-blue  will-change-contents  relative z-[7] snap-mandatory grid grid-cols-3 grid-rows-2 md:grid-rows-1 md:grid-cols-6 pt-28  h-full  serviceSection "
         >
           {cards.map((card, index) => (
             <div
               onClick={() => handleClick(card.title)}
               key={index}
-              className={`${card.image} will-change-contents md:py-16 py-6 px-12  flex flex-col items-center relative  bg-cover  w-full overflow-hidden group   bg-center card intersectImage h-full  `}
+              className={`${card.image} will-change-contents border-x-2 border-yellow md:py-16 py-6 px-12  flex flex-col items-center relative  bg-cover  w-full overflow-hidden group   bg-center card intersectImage h-full  `}
             >
               <p
                 className={`2xl:text-6xl text-center md:text-left text-2xl md:text-4xl  transition-all duration-1000 ease-in-out ${

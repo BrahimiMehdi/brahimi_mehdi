@@ -12,13 +12,10 @@ export default function App({ Component, pageProps }: AppProps) {
 
   
   useEffect(() => {
-    
-
     const context =gsap.context(()=>{
-      tl.to("#topers", { width: "100%", duration: 5, ease: Power3.easeOut });
+    tl.to("#topers", { width: "100%", duration: 5, ease: Power3.easeOut });
     gsap.set(".ball", { xPercent: -50, yPercent: -50 });
     let mm = gsap.matchMedia();
-
     // add a media query. When it matches, the associated function will run
     mm.add("(min-width: 800px)", () => {
 
@@ -33,7 +30,7 @@ export default function App({ Component, pageProps }: AppProps) {
           },
         });
       });
-      gsap.utils.toArray(".scrollLineH").forEach((line: any) => {
+      gsap.utils.toArray(".scrollLineH").forEach((line:any) => {
         let number = line.getAttribute("data-scrollh");
         gsap.to(`.scrollLineH[data-scrollh="${number}"]`, {
           width: "100%",
@@ -84,7 +81,6 @@ export default function App({ Component, pageProps }: AppProps) {
       });
       
     });
-
     gsap.utils.toArray(".sideLine").forEach((line: any) => {
       let number = line.getAttribute("data-line");
       gsap.to(`.sideLine[data-line="${number}"]`, {
