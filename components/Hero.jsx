@@ -33,7 +33,7 @@ const Hero = () => {
           </LinkS>
           <button className="w-full lg:w-60   max-w-sm sm:w-48 sm:flex-shrink">
           <Link href={"/contact"} className={`lg:w-60 hover:bg-blue   max-w-sm sm:w-48 sm:flex-shrink intersect cursor-pointer uppercase border-white transition-all duration-300 ease-out group flex items-center justify-center tracking-widest  h-16 border-2   `}>
-            hire me
+            get in touch
           </Link>
           </button>
           
