@@ -11,7 +11,7 @@ const WorkSection = (props: Props) => {
       desc: "Engineered Pharma at Hand, a resource platform for pharmacy students, consolidating essential tools and information. The site streamlines the student experience, providing easy access to resources crucial for academic success in the field of pharmacy in algeria.",
       dark: false,
       rounded: true,
-      link: "",
+      link: "https://pharma-at-hand.vercel.app/",
     },
     {
       title: "ASEPA",
@@ -19,7 +19,7 @@ const WorkSection = (props: Props) => {
       desc: "Created a blog for the scientific association of pharmacy students of the University of Algiers. (ASEPA), focusing on awareness and support for pharmacy students. The platform serves as an informative space throughout their academic journey, offering valuable resources and insights.",
       dark: false,
       rounded: false,
-      link: "",
+      link: "https://asepalg.com/",
     },
     {
       title: "3JoyGames",
@@ -27,8 +27,7 @@ const WorkSection = (props: Props) => {
       desc: "Created an ecommerce store and blog for 3JoyGames, a company specializing in entertaining games for diverse audiences. The platform seamlessly combines product listings and informative content to cater to both kids and adults.",
       dark: false,
       rounded: true,
-
-      link: "",
+      link: "https://3joygames.com/",
     },
     {
       title: "basa cosmetique",
@@ -36,7 +35,7 @@ const WorkSection = (props: Props) => {
       desc: "Developed an ecommerce platform for Basa Cosmetique, a natural cosmetics company. The site offers a straightforward and engaging shopping experience for users seeking high-quality, nature-inspired beauty products.",
       dark: true,
       rounded: false,
-      link: "",
+      link: "https://basacosmetique.com/",
     },
     {
       title: "Flyfra",
@@ -44,7 +43,7 @@ const WorkSection = (props: Props) => {
       desc: "Designed a website for an airlines training company, FlyFra, providing comprehensive resources for aspiring aviation professionals. The site facilitates students' access to essential information, ensuring a solid foundation for success in the aviation industry.",
       dark: false,
       rounded: false,
-      link: "",
+      link: "https://flyfra.vercel.app/",
     },
     {
       title: "Ophin",
@@ -52,7 +51,7 @@ const WorkSection = (props: Props) => {
       desc: "Developed a blog for a pharmacy student club, Ophin, dedicated to exploring botanical aspects of pharmacy. The site serves as a knowledge-sharing platform, fostering a deeper understanding of the botanical fields within the realm of pharmacy.",
       dark: false,
       rounded: false,
-      link: "",
+      link: "https://ophin.vercel.app/",
     },
   ];
   return (
