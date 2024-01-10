@@ -3,6 +3,7 @@ import {
   Header,
   Hero,
   Services,
+  WorkSection,
   Contact,
   About,
   Work,
@@ -27,7 +28,7 @@ export default function Home() {
         <Hero />
         <About />
         <Services />
-        <Work />
+        <WorkSection />
         <Contact />
         <Footer />
       </main>

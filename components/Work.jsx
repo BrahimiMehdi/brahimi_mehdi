@@ -68,15 +68,15 @@ const Work = () => {
           <p className="font-bold  text-white tracking-wide uppercase sm:text-3xl text-2xl lg:text-5xl ">
             my work
           </p>
-          <Link href={"/personal-projects"}>
-            <div className="md:w-48 w-32 transition-all duration-300 ease-out hover:scale-95 text-gray-50  hover:text-yellow flex items-center justify-between">
+          <Link href={"/work"}>
+            <div className=" transition-all duration-300 ease-out hover:scale-95 text-gray-50  hover:text-yellow flex items-center gap-x-4">
               <p
                 className={`${hind_Guntur.className} relative top-1 text-sm leading-normal  text-center uppercase tracking-widest font-light`}
               >
-                personal projects
+                see more
               </p>
               <svg
-                className="w-3 sm:block hidden"
+                className="w-3 relative sm:block hidden"
                 viewBox="0 0 24 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
