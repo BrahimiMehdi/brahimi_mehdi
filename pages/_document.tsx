@@ -5,7 +5,11 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          
+          <meta name="og:description" content="Turn your idea into a reality" />
+          <meta
+          property="og:image"
+          content="/bg.jpg"
+        />
           <link
             href="https://fonts.googleapis.com/css2?family=Inter&display=optional"
             rel="stylesheet"
