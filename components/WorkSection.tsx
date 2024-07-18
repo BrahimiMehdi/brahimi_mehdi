@@ -14,12 +14,36 @@ const WorkSection = (props: Props) => {
       link: "https://pharma-at-hand.vercel.app/",
     },
     {
-      title: "ASEPA",
+      title: "Microhack",
+      icon: "/logo.png",
+      desc: "Collaborated with a team of developers and designers to create a registration website for the Microhack hackathon. My responsibilities included developing the agenda and assisting with the Hero and timeline sections, ensuring a cohesive and engaging user experience.",
+      dark: false,
+      rounded: true,
+      link: "https://microhack.microclub.info/",
+    },
+    {
+      title: "Innobase",
+      icon: "",
+      desc: "Designed and developed a comprehensive website for an Algerian startup, offering a specialized horizon scanning database for researchers. This platform streamlines the process of identifying emerging trends and opportunities in various fields of study.",
+      dark: false,
+      rounded: true,
+      link: "https://inno-base.vercel.app/",
+    },
+    {
+      title: "ASEPA-2",
+      icon: "/logos/aspeaLogo.png",
+      desc: "Revamped my previous website creation using the latest version of the Next.js app router. This upgrade significantly enhances both the user and editor experience, providing a smoother interface, faster load times, and more efficient navigation. The improvements ensure a modern, user-friendly environment for all visitors and contributors.",
+      dark: false,
+      rounded: false,
+      link: "https://asepalg.com/",
+    },
+    {
+      title: "ASEPA-1",
       icon: "/logos/aspeaLogo.png",
       desc: "Created a blog for the scientific association of pharmacy students of the University of Algiers. (ASEPA), focusing on awareness and support for pharmacy students. The platform serves as an informative space throughout their academic journey, offering valuable resources and insights.",
       dark: false,
       rounded: false,
-      link: "https://asepalg.com/",
+      link: "https://old-asepalg.vercel.app/",
     },
     {
       title: "3JoyGames",
@@ -66,8 +90,9 @@ const WorkSection = (props: Props) => {
         className={`w-[1px] h-0 z-40 scrollLine  transition-all duration-300 ease-out   right-0 top-0   bg-yellow  absolute `}
       ></div>
       {workData.map((job, index) => (
-        <WorkCard job={job} key={index} />
+        <WorkCard spanTwo={index+1===workData.length} job={job} key={index} />
       ))}
+      
     </section>
   );
 };
